@@ -1,0 +1,317 @@
+/* Executive brief used by the landing page print action. */
+.print-executive-summary {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    width: auto;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #092235;
+    font-family: 'Alexandria', sans-serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body > .noise,
+  body > .skip-link,
+  body > .topbar,
+  body > .site-footer,
+  body > .mobile-sticky-cta,
+  dialog,
+  #main-content > :not(.print-executive-summary) {
+    display: none !important;
+  }
+
+  #main-content {
+    display: block;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .print-executive-summary {
+    display: block !important;
+    direction: rtl;
+    background: #ffffff;
+  }
+
+  .print-summary-header,
+  .print-summary-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .print-summary-header {
+    border-bottom: 1px solid #cfe5e1;
+    padding: 0 0 10px;
+  }
+
+  .print-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .print-brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+  }
+
+  .print-brand strong,
+  .print-brand span,
+  .print-document-label,
+  .print-summary-hero p,
+  .print-summary-hero span,
+  .print-stat-grid span,
+  .print-section-label,
+  .print-steps span,
+  .print-methods span,
+  .print-outcome-section p,
+  .print-outcome-stat span,
+  .print-summary-footer {
+    display: block;
+  }
+
+  .print-brand strong {
+    font-size: 11pt;
+    font-weight: 800;
+    line-height: 1.45;
+  }
+
+  .print-brand span {
+    margin-top: 2px;
+    color: #4f6d79;
+    font-size: 8.5pt;
+  }
+
+  .print-document-label {
+    border: 1px solid #0b857a;
+    border-radius: 999px;
+    color: #087268;
+    font-size: 8.5pt;
+    font-weight: 700;
+    padding: 5px 10px;
+  }
+
+  .print-summary-hero {
+    margin: 18px 0 14px;
+    padding: 18px 20px;
+    border-radius: 12px;
+    background: #092235;
+    color: #ffffff;
+    break-inside: avoid;
+  }
+
+  .print-summary-hero p {
+    margin: 0 0 7px;
+    color: #7fe2d7;
+    font-size: 8.5pt;
+    font-weight: 700;
+  }
+
+  .print-summary-hero h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 20pt;
+    font-weight: 800;
+    line-height: 1.45;
+  }
+
+  .print-summary-hero span {
+    margin-top: 8px;
+    color: #d8f1ed;
+    font-size: 9pt;
+    line-height: 1.8;
+  }
+
+  .print-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 7px;
+    break-inside: avoid;
+  }
+
+  .print-stat-grid > div {
+    border: 1px solid #cfe5e1;
+    border-radius: 9px;
+    background: #f5fbfa;
+    padding: 10px 8px;
+    text-align: center;
+  }
+
+  .print-stat-grid strong {
+    display: block;
+    color: #087268;
+    font-size: 15pt;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+  }
+
+  .print-stat-grid span {
+    margin-top: 4px;
+    color: #365560;
+    font-size: 7.5pt;
+    line-height: 1.5;
+  }
+
+  .print-content-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .print-summary-section {
+    break-inside: avoid;
+    border: 1px solid #dde9e7;
+    border-radius: 10px;
+    padding: 13px;
+    background: #ffffff;
+  }
+
+  .print-section-label {
+    margin: 0 0 4px;
+    color: #087268;
+    font-size: 7.5pt;
+    font-weight: 800;
+  }
+
+  .print-summary-section h2 {
+    margin: 0;
+    color: #092235;
+    font-size: 11pt;
+    font-weight: 800;
+    line-height: 1.45;
+  }
+
+  .print-steps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+  }
+
+  .print-steps li {
+    position: relative;
+    min-height: 43px;
+    padding: 7px 31px 7px 6px;
+    border-radius: 7px;
+    background: #f5fbfa;
+    counter-increment: step;
+  }
+
+  .print-steps li::before {
+    content: counter(step);
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #087a70;
+    color: #ffffff;
+    font-size: 7.5pt;
+    font-weight: 800;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .print-steps b {
+    display: block;
+    color: #092235;
+    font-size: 8pt;
+  }
+
+  .print-steps span {
+    margin-top: 2px;
+    color: #42616b;
+    font-size: 7pt;
+    line-height: 1.5;
+  }
+
+  .print-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 11px;
+  }
+
+  .print-methods span {
+    border: 1px solid #cfe5e1;
+    border-radius: 999px;
+    background: #f5fbfa;
+    color: #155964;
+    font-size: 7.5pt;
+    font-weight: 700;
+    padding: 5px 7px;
+  }
+
+  .print-outcome-section {
+    display: grid;
+    grid-template-columns: 1fr 145px;
+    align-items: center;
+    gap: 14px;
+    margin-top: 12px;
+    border-color: #b9ded8;
+    background: #eaf7f4;
+  }
+
+  .print-outcome-section p:not(.print-section-label) {
+    margin: 7px 0 0;
+    color: #365560;
+    font-size: 8pt;
+    line-height: 1.8;
+  }
+
+  .print-outcome-stat {
+    border-right: 1px solid #b9ded8;
+    padding-right: 13px;
+    text-align: center;
+  }
+
+  .print-outcome-stat strong {
+    display: block;
+    color: #087268;
+    font-size: 20pt;
+    font-weight: 800;
+  }
+
+  .print-outcome-stat span {
+    margin-top: 4px;
+    color: #365560;
+    font-size: 7pt;
+    line-height: 1.55;
+  }
+
+  .print-summary-footer {
+    margin-top: 14px;
+    border-top: 1px solid #cfe5e1;
+    padding-top: 9px;
+    color: #42616b;
+    font-size: 8pt;
+  }
+
+  .print-summary-footer b {
+    color: #092235;
+    font-size: 10pt;
+  }
+}
