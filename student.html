@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تجربة الطالب | منظومة الحوكمة الرقمية للحضور الأكاديمي</title>
+  <meta name="description" content="تطبيق الطالب الجامعي في منظومة الحوكمة الرقمية للحضور الأكاديمي: جدول المحاضرات اليومي، تحضير فوري عبر Bluetooth وNFC، متابعة نسب الغياب والإنذارات، وبلاغ إلكتروني موثق بدل التظلمات الورقية.">
+  <meta name="theme-color" content="#092235">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_EG">
+  <meta property="og:title" content="تجربة الطالب | منظومة الحوكمة الرقمية للحضور الأكاديمي">
+  <meta property="og:description" content="شفافية كاملة للطالب من معرفة موعد ومكان المحاضرة وحتى متابعة نسب الغياب وتقديم البلاغ الإلكتروني دون أوراق.">
+  <meta property="og:image" content="assets/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="تجربة الطالب | منظومة الحوكمة الرقمية للحضور الأكاديمي">
+  <meta name="twitter:description" content="تسجيل حضور في ثوانٍ ومتابعة فورية لنسب الغياب والإنذارات الأكاديمية.">
+  <meta name="twitter:image" content="assets/og-cover.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Progressive Enhancement Flag -->
+  <script>document.documentElement.classList.add('js-enabled');</script>
+
+  <!-- Unified Stylesheet -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "تجربة الطالب — منظومة الحوكمة الرقمية للحضور الأكاديمي",
+    "inLanguage": "ar",
+    "description": "عرض تفصيلي لواجهة وتجربة الطالب الجامعي في تسجيل الحضور ومتابعة الجدول ونسب الغياب والبلاغات الإلكترونية."
+  }
+  </script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">تخطي إلى المحتوى الرئيسي</a>
+
+  <!-- Unified Ecosystem Header -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html" aria-label="العودة إلى الصفحة الرئيسية للمنظومة">
+        <img class="brand-logo" src="assets/logo-112.png" alt="شعار منظومة الحوكمة الرقمية للحضور الأكاديمي" width="48" height="48">
+        <span>
+          منظومة الحوكمة الرقمية للحضور الأكاديمي
+          <small>تجربة الطالب الجامعي والشفافية الأكاديمية</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="التنقل بين صفحات المنظومة">
+        <a href="index.html">الرئيسية</a>
+        <a href="journey.html">الرحلة التعليمية</a>
+        <a href="lecturer.html">المحاضر</a>
+        <a href="student.html" class="active" aria-current="page">الطالب</a>
+        <a href="coordinator.html">المنسق</a>
+        <a href="index.html#results">نتائج الزقازيق</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <a class="btn btn-outline-light btn-sm header-whatsapp" data-cta-source="student_header_whatsapp" href="https://wa.me/201062091434?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%A7%D9%84%D8%B7%D8%A7%D9%84%D8%A8%20%D9%81%D9%8A%20%D9%85%D9%86%D8%B8%D9%88%D9%85%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1%20%D8%A7%D9%84%D8%A3%D9%83%D8%A7%D8%AF%D9%8A%D9%85%D9%8A" target="_blank" rel="noopener noreferrer">
+          تواصل عبر واتساب
+        </a>
+        <a class="btn btn-primary btn-sm" href="index.html#contact">اطلب عرضاً توضيحياً</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="فتح القائمة الرئيسية">
+          <svg class="icon-burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =====================================================================
+         HERO: STUDENT EXPERIENCE
+         ===================================================================== -->
+    <section class="sub-hero theme-student" id="top">
+      <div class="sub-hero-inner">
+        <div>
+          <nav class="breadcrumb" aria-label="مسار الصفحة">
+            <a href="index.html">الرئيسية</a>
+            <span aria-hidden="true">/</span>
+            <span>صفحة الطالب</span>
+          </nav>
+
+          <p class="eyebrow">تجربة الطالب • وضوح يومي وعدالة موثقة</p>
+          <h1>رحلة حضور واضحة تحمي وقت الطالب <em>وتُنهي مفاجآت الحرمان</em></h1>
+          <p class="hero-lead">
+            بدل البحث عن المواعيد في رسائل متفرقة والانتظار لنهاية الفصل لمعرفة موقف الغياب، يضع التطبيق بين يدي الطالب جدوله المعتمد، تحضيراً لحظياً في ثوانٍ، ومتابعة شفافة لكل مقرر وبلاغ.
+          </p>
+
+          <div class="hero-stats" aria-label="مؤشرات تجربة الطالب">
+            <div class="hero-stat">
+              <strong data-count="8242">8,242</strong>
+              <span>طالب وطالبة يستخدمون المنظومة</span>
+            </div>
+            <div class="hero-stat">
+              <strong>ثوانٍ</strong>
+              <span>لتأكيد الحضور من داخل القاعة</span>
+            </div>
+            <div class="hero-stat">
+              <strong>99.55%</strong>
+              <span>عمليات حضور تمت دون أي إشكالية</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#overview">استكشف مزايا تطبيق الطالب</a>
+            <a class="btn btn-outline-light" href="index.html#contact">اطلب عرضاً لكليتك</a>
+          </div>
+        </div>
+
+        <!-- Bespoke Student App Console Preview -->
+        <div class="console-window" aria-label="معاينة توضيحية لشاشة الطالب الرئيسية">
+          <div class="console-topbar">
+            <span class="console-title">تطبيق الطالب • الفرقة الرابعة (طب بشري)</span>
+            <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <div class="console-body">
+            <div class="ui-highlight-box">
+              <div>
+                <span>المحاضرة القادمة • اليوم 10:00 ص</span>
+                <strong>مدرج (ب) — موديول الباطنة العامة</strong>
+              </div>
+              <span class="ui-chip chip-ok">حضوري</span>
+            </div>
+
+            <div class="console-kpis">
+              <div class="console-kpi">
+                <strong>93.8%</strong>
+                <span>إجمالي الحضور</span>
+              </div>
+              <div class="console-kpi">
+                <strong>6 مقررات</strong>
+                <span>مسجلة بالفصل</span>
+              </div>
+              <div class="console-kpi">
+                <strong>0 إنذار</strong>
+                <span>حالة أكاديمية آمنة</span>
+              </div>
+            </div>
+
+            <div class="ui-list">
+              <div class="ui-row">
+                <b>سكشن المهارات الإكلينيكية — معمل (3)</b>
+                <span class="ui-chip chip-ok">تم الرصد عبر NFC</span>
+              </div>
+              <div class="ui-row">
+                <b>محاضرة الفارماكولوجي التفاعلية</b>
+                <span class="ui-chip chip-info">أونلاين • Teams</span>
+              </div>
+              <div class="ui-row">
+                <b>بلاغ حضور جلسة الأسبوع الماضي</b>
+                <span class="ui-chip chip-ok">مقبول ومُحدَّث</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- In-Page Quick Jump Bar -->
+    <div class="subpage-jumpbar" aria-label="أقسام صفحة الطالب">
+      <div class="subpage-jumpbar-inner">
+        <span class="jumpbar-label">انتقل سريعاً إلى:</span>
+        <div class="jumpbar-links">
+          <a href="#overview">01 المشهد الأكاديمي</a>
+          <a href="#schedule">02 الجدول الدراسي</a>
+          <a href="#checkin">03 تسجيل الحضور</a>
+          <a href="#tracking">04 متابعة الغياب والإنذارات</a>
+          <a href="#reports">05 البلاغ الإلكتروني</a>
+          <a href="#faq">الأسئلة الشائعة</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================================
+         01. ACADEMIC OVERVIEW: MODULES & PARTICIPATING DEPARTMENTS
+         ===================================================================== -->
+    <section class="section surface-paper" id="overview">
+      <div class="section-inner reveal">
+        <div class="split-feature">
+          <div class="split-copy">
+            <p class="eyebrow dark">01 • المشهد الأكاديمي الكامل</p>
+            <h2>كل المواد والمسارات التعليمية <em>مرتبة بوضوح منذ اليوم الأول</em></h2>
+            <p>
+              بمجرد تسجيل دخول الطالب، يرى خريطته الدراسية الفعلية المعتمدة من الكلية سواء كانت بنظام الموديولات المتكاملة أو الساعات المعتمدة أو الفرق الدراسية.
+            </p>
+
+            <div class="feature-rows">
+              <article class="feature-row-card">
+                <div class="icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>بطاقة مستقلة لكل موديول أو مقرر</h3>
+                  <p>توضح إجمالي الجلسات المقررة، ما تم تنفيذه منها، والحد الأقصى المسموح به للغياب وفق لائحة الكلية.</p>
+                </div>
+              </article>
+
+              <article class="feature-row-card">
+                <div class="icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>عرض الأقسام العلمية المشاركة</h3>
+                  <p>في الكليات الطبية والعملية، يعرف الطالب بدقة الأقسام المشتركة داخل الموديول الواحد وتوزيع المحاضرات والسكاشن بينها.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="split-visual">
+            <div class="ui-mockup" aria-label="نموذج خريطة المقررات والأقسام للطالب">
+              <div class="ui-mockup-bar">
+                <span class="ui-mockup-title">مقررات الفصل الحالي • المسار الإكلينيكي</span>
+                <span class="ui-status-pill">لائحة معتمدة</span>
+              </div>
+              <div class="ui-mockup-body">
+                <div class="ui-row">
+                  <div>
+                    <b>موديول الجهاز القلبي الوعائي</b>
+                    <div><small>الأقسام: الباطنة • الفسيولوجي • الفارماكولوجي</small></div>
+                  </div>
+                  <span class="ui-chip chip-ok">24 جلسة</span>
+                </div>
+                <div class="ui-row">
+                  <div>
+                    <b>موديول الجراحة العامة والطوارئ</b>
+                    <div><small>الأقسام: الجراحة • التخدير • الأشعة التشخيصية</small></div>
+                  </div>
+                  <span class="ui-chip chip-ok">20 جلسة</span>
+                </div>
+                <div class="ui-row">
+                  <div>
+                    <b>موديول طب الأطفال وحديثي الولادة</b>
+                    <div><small>الأقسام: الأطفال • التغذية الإكلينيكية</small></div>
+                  </div>
+                  <span class="ui-chip chip-info">18 جلسة</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         02. INTERACTIVE SCHEDULE: WHERE, WHEN, WITH WHOM
+         ===================================================================== -->
+    <section class="section surface-cream" id="schedule">
+      <div class="section-inner reveal">
+        <div class="split-feature reverse">
+          <div class="split-copy">
+            <p class="eyebrow dark">02 • الجدول الدراسي الذكي</p>
+            <h2>اعرف محاضرتك القادمة: <em>أين ومتى ومع من</em></h2>
+            <p>
+              يرتبط جدول الطالب مباشرة بما يعتمده المنسق الأكاديمي، فيظهر له يومه الدراسي مرتباً بالساعة والمكان ونوع الجلسة دون تضارب في المواعيد.
+            </p>
+
+            <div class="feature-rows">
+              <article class="feature-row-card">
+                <div class="icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>تفاصيل مكانية وزمنية كاملة</h3>
+                  <p>اسم المدرج أو المعمل، المجموعة أو السكشن، توقيت البدء والانتهاء، واسم عضو هيئة التدريس المحاضر.</p>
+                </div>
+              </article>
+
+              <article class="feature-row-card">
+                <div class="icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>تمييز واضح بين الحضوري والأونلاين</h3>
+                  <p>يعرف الطالب مسبقاً ما إذا كانت الجلسة داخل الحرم الجامعي أو عبر Microsoft Teams للاستعداد في الوقت المناسب.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="split-visual">
+            <div class="console-window" aria-label="نموذج جدول اليوم والغد للطالب">
+              <div class="console-topbar">
+                <span class="console-title">جدول المحاضرات • الثلاثاء</span>
+                <span class="ui-status-pill">3 جلسات اليوم</span>
+              </div>
+              <div class="console-body">
+                <div class="ui-row">
+                  <div>
+                    <b>09:00 ص — محاضرة أمراض القلب</b>
+                    <div><small>مدرج (أ) الدور الثاني • أ.د. طارق عبد الرحمن</small></div>
+                  </div>
+                  <span class="ui-chip chip-ok">تم الحضور</span>
+                </div>
+                <div class="ui-row">
+                  <div>
+                    <b>11:30 ص — سكشن المهارات الإكلينيكية (مجموعة 4)</b>
+                    <div><small>معمل المحاكاة (2) • د. سارة محمود</small></div>
+                  </div>
+                  <span class="ui-chip chip-warn">الجلسة القادمة</span>
+                </div>
+                <div class="ui-row">
+                  <div>
+                    <b>02:30 م — مناقشة حالات إكلينيكية</b>
+                    <div><small>جلسة إلكترونية عبر Microsoft Teams</small></div>
+                  </div>
+                  <span class="ui-chip chip-info">أونلاين</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         03. SEAMLESS CHECK-IN: BLUETOOTH, NFC & VERIFIED FALLBACK
+         ===================================================================== -->
+    <section class="section surface-slate" id="checkin">
+      <div class="section-inner reveal">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">03 • تسجيل الحضور في ثوانٍ</p>
+            <h2>طريقتان فوريتان للتحضير <em>ومسار احتياطي يحفظ حق الطالب</em></h2>
+          </div>
+          <p>
+            لا انتظار في طوابير ولا تمرير لأوراق تتلف بين المقاعد؛ يسجل الطالب حضوره بالوسيلة الأنسب لطبيعة القاعة أو المعمل.
+          </p>
+        </div>
+
+        <div class="method-cards">
+          <article class="method-card card-featured">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 7l10 10-5 5V2l5 5L7 17"/>
+              </svg>
+            </div>
+            <span class="method-tag">داخل المدرجات والقاعات</span>
+            <h3>بضغطة واحدة عبر Bluetooth</h3>
+            <p>
+              بمجرد تفعيل المحاضر للجلسة، يظهر زر التحضير على هاتف الطالب داخل القاعة ليسجل حضوره من مقعده خلال ثوانٍ مع إشعار تأكيد فوري.
+            </p>
+            <span class="method-badge">تأكيد لحظي على شاشة الطالب</span>
+          </article>
+
+          <article class="method-card">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 15h4M7 11h2M15 11a2 2 0 0 1 0 4"/>
+              </svg>
+            </div>
+            <span class="method-tag">عند مدخل السكاشن والمعامل</span>
+            <h3>تمرير بطاقة NFC الذكية</h3>
+            <p>
+              في المعامل والتدريبات الإكلينيكية، يكفي تمرير البطاقة اللاتلامسية لتوثيق الحضور فوراً حتى دون إخراج الهاتف الشخصي.
+            </p>
+            <span class="method-badge">لا يتطلب اتصال إنترنت بهاتف الطالب</span>
+          </article>
+
+          <article class="method-card">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <span class="method-tag">عند الأعطال أو نفاد البطارية</span>
+            <h3>مسار استثنائي موثق بالقاعة</h3>
+            <p>
+              إذا واجه هاتف الطالب أي ظرف تقني عارض، يثبت المحاضر حضوره مباشرة عبر القائمة الإلكترونية للجلسة دون ضياع حضوره الفعلي.
+            </p>
+            <span class="method-badge">صفر ضياع لحقوق الطلاب الملتزمين</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         04. ABSENCE & WARNINGS TRACKING WITHOUT SURPRISES
+         ===================================================================== -->
+    <section class="section surface-paper" id="tracking">
+      <div class="section-inner reveal">
+        <div class="split-feature">
+          <div class="split-copy">
+            <p class="eyebrow dark">04 • متابعة دون مفاجآت</p>
+            <h2>رؤية لحظية لنسب الغياب <em>وتنبيه مبكر قبل منطقة الخطر</em></h2>
+            <p>
+              في الأنظمة الورقية، يكتشف الطالب تجاوزه لنسبة الغياب عند تعليق قوائم الحرمان قبل الامتحانات بأيام. هنا يتابع رصيده بعد كل محاضرة بشفافية كاملة.
+            </p>
+
+            <div class="cap-grid-2">
+              <article class="cap-card">
+                <h3>عداد غياب لكل موديول</h3>
+                <p>يعرض عدد الجلسات المحضورة والغائبة والنسبة المئوية المتبقية قبل الحد اللائحي.</p>
+              </article>
+              <article class="cap-card">
+                <h3>درجات إنذار واضحة</h3>
+                <p>تمييز بصري واضح بين الحالة الآمنة، التنبيه المبكر، الإنذار الأكاديمي، وموقف الحرمان.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="split-visual">
+            <div class="console-window" aria-label="لوحة مؤشرات الغياب والإنذارات للطالب">
+              <div class="console-topbar">
+                <span class="console-title">سجل الالتزام والإنذارات • تحديث فوري</span>
+                <span class="ui-status-pill">الحد الأقصى للغياب: 25%</span>
+              </div>
+              <div class="console-body">
+                <div class="ui-meter">
+                  <div class="ui-meter-head">
+                    <b>موديول الباطنة العامة (حضرت 22 من 23 جلسة)</b>
+                    <span>غياب 4.3% • آمن</span>
+                  </div>
+                  <div class="ui-meter-track">
+                    <div class="ui-meter-fill" style="width: 95.7%"></div>
+                  </div>
+                </div>
+
+                <div class="ui-meter">
+                  <div class="ui-meter-head">
+                    <b>موديول الجراحة العامة (حضرت 18 من 20 جلسة)</b>
+                    <span>غياب 10% • آمن</span>
+                  </div>
+                  <div class="ui-meter-track">
+                    <div class="ui-meter-fill" style="width: 90%"></div>
+                  </div>
+                </div>
+
+                <div class="ui-meter">
+                  <div class="ui-meter-head">
+                    <b>موديول طب الأطفال (حضرت 13 من 16 جلسة)</b>
+                    <span>غياب 18.7% • تنبيه مبكر</span>
+                  </div>
+                  <div class="ui-meter-track">
+                    <div class="ui-meter-fill warn" style="width: 81.3%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         05. ELECTRONIC ATTENDANCE REPORT (WITH REAL APP SCREENSHOT)
+         ===================================================================== -->
+    <section class="section surface-mint" id="reports">
+      <div class="section-inner reveal">
+        <div class="split-feature reverse">
+          <div class="split-copy">
+            <p class="eyebrow dark">05 • البلاغ الإلكتروني بدل التظلم الورقي</p>
+            <h2>تظلم رقمي مرتبط بالجلسة <em>تتابعه خطوة بخطوة من هاتفك</em></h2>
+            <p>
+              إذا حضر الطالب محاضرة وتعذر رصده لسبب استثنائي أو عذر موثق، لا يحتاج للتنقل بين المكاتب وتقديم طلبات ورقية؛ يرفع بلاغاً مرتبطاً بالجلسة نفسها ويتابع قرار المحاضر بشفافية.
+            </p>
+
+            <div class="feature-rows">
+              <article class="feature-row-card">
+                <div class="icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M12 18v-6M9 15h6"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>ربط مباشر بالمحاضرة والمرفقات</h3>
+                  <p>يختار الطالب الجلسة المحددة ويكتب سبب البلاغ أو يرفق المستند الداعم ليصل مباشرة إلى محاضر الجلسة.</p>
+                </div>
+              </article>
+
+              <article class="feature-row-card">
+                <div class="icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>ثلاث حالات واضحة دون غموض</h3>
+                  <p>يتابع الطالب حالة بلاغه لحظياً: <b>قيد المراجعة</b>، أو <b>مقبول</b> (مع تعديل نسبة الحضور تلقائياً)، أو <b>مرفوض</b> مع توضيح السبب.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Real Sanitized App Screenshot from Zagazig Deployment -->
+          <div class="split-visual">
+            <button class="real-shot-button" type="button" data-full="assets/student-complaint.jpeg" data-caption="لقطة فعلية من شاشة تقديم ومتابعة البلاغات الإلكترونية داخل تطبيق الطالب">
+              <img src="assets/student-complaint.jpeg" alt="لقطة حقيقية من تطبيق الطالب توضح شاشة البلاغ الإلكتروني وحالته" width="720" height="1600" loading="lazy">
+              <span class="real-shot-caption">لقطة حقيقية من التطبيق — اضغط للتكبير</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         06. STUDENT FAQ
+         ===================================================================== -->
+    <section class="section surface-paper" id="faq">
+      <div class="section-inner reveal">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow dark">أسئلة متكررة حول تجربة الطالب</p>
+            <h2>إجابات واضحة تضمن <em>اطمئنان الطالب والكلية</em></h2>
+          </div>
+          <p>
+            كيف يتعامل التطبيق مع الحالات اليومية المعتادة للطلاب داخل المدرجات والمعامل.
+          </p>
+        </div>
+
+        <div class="faq-grid">
+          <details class="faq-item" open>
+            <summary>
+              <span>ماذا يفعل الطالب إذا نفدت بطارية هاتفه قبل المحاضرة؟</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              يمكنه تسجيل حضوره عبر بطاقة NFC الذكية أو إبلاغ المحاضر في القاعة ليضيفه عبر المسار اليدوي الموثق، كما يمكنه تقديم بلاغ حضور إلكتروني فور تشغيل هاتفه.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>متى تتحدث نسبة الحضور والغياب في حساب الطالب؟</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              تظهر حركة الحضور فور اعتماد المحاضر للجلسة مباشرة، وتتحدث النسبة المئوية للمقرر تلقائياً دون انتظار تفريغ إداري في نهاية الشهر.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>ماذا لو غيّر الطالب هاتفه المحمول خلال العام الدراسي؟</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              لضمان عدم تسجيل طالب مكان زميله، يرتبط الحساب بجهاز الطالب الشخصي، وعند تغيير الهاتف يتم تحديث ربط الجهاز الجديد عبر إجراء منظم ومعتمد من وحدة التنسيق أو الدعم الفني.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>كيف يُحتسب حضور الطالب في المحاضرات الأونلاين؟</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              يتم استيراد كشف حضور الجلسة الإلكترونية (مثل Microsoft Teams) وربطه بحساب الطالب الأكاديمي تلقائياً ليظهر ضمن سجل حضور المقرر نفسه جنباً إلى جنب مع الجلسات الحضورية.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         ECOSYSTEM DIRECTORY & CLOSING CTA
+         ===================================================================== -->
+    <section class="section surface-cream" id="cta">
+      <div class="section-inner reveal">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow dark">تكامل الأدوار داخل المنظومة</p>
+            <h2>تعرّف على بقية أطراف <em>الدورة الأكاديمية الرقمية</em></h2>
+          </div>
+          <p>
+            تجربة الطالب هي حلقة متصلة بما يقوم به المحاضر والمنسق وإدارة الكلية في منظومة واحدة.
+          </p>
+        </div>
+
+        <div class="ecosystem-grid">
+          <a class="ecosystem-card" href="journey.html">
+            <div class="ecosystem-card-top">
+              <span>المسار الكامل • 5 محطات</span>
+              <h3>الرحلة التعليمية الرقمية</h3>
+              <p>تتبّع انتقال البيانات من استيراد الجدول حتى قرارات الحوكمة المعتمدة.</p>
+            </div>
+            <span class="ecosystem-link-label">استعرض الرحلة ←</span>
+          </a>
+
+          <a class="ecosystem-card" href="lecturer.html">
+            <div class="ecosystem-card-top">
+              <span>الطرف المقابل بالقاعة</span>
+              <h3>صفحة المحاضر</h3>
+              <p>كيف يدير عضو هيئة التدريس الجلسة ويعالج بلاغات الطلاب في ثوانٍ.</p>
+            </div>
+            <span class="ecosystem-link-label">استكشف صفحة المحاضر ←</span>
+          </a>
+
+          <div class="ecosystem-card is-current" aria-current="page">
+            <div class="ecosystem-card-top">
+              <span>أنت تتصفح الآن</span>
+              <h3>صفحة الطالب</h3>
+              <p>الجدول الذكي، التحضير السريع، متابعة الغياب، والبلاغ الإلكتروني.</p>
+            </div>
+            <span class="ecosystem-link-label">الصفحة الحالية</span>
+          </div>
+
+          <a class="ecosystem-card" href="coordinator.html">
+            <div class="ecosystem-card-top">
+              <span>التشغيل وضبط الجودة</span>
+              <h3>صفحة المنسق الأكاديمي</h3>
+              <p>تجهيز الجداول ومراقبة التزام الرصد وبوابة الجاهزية قبل القرار.</p>
+            </div>
+            <span class="ecosystem-link-label">استكشف صفحة المنسق ←</span>
+          </a>
+        </div>
+
+        <div class="subpage-cta-box" style="margin-top: var(--sp-7);">
+          <div>
+            <h2>هل ترغب في توفير هذه التجربة لطلاب كليتك؟</h2>
+            <p>نقدم عرضاً عملياً مباشراً يوضح دورة عمل الطالب والمحاضر والمنسق على هيكل مقررات كليتكم.</p>
+          </div>
+          <div class="subpage-cta-actions">
+            <a class="btn btn-primary" href="index.html#contact">اطلب عرضاً توضيحياً</a>
+            <a class="btn btn-outline-light" data-cta-source="student_bottom_whatsapp" href="https://wa.me/201062091434?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D9%86%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B9%D8%B1%D8%B6%20%D8%AA%D9%88%D8%B6%D9%8A%D8%AD%D9%8A%20%D9%84%D9%85%D9%86%D8%B8%D9%88%D9%85%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1%20%D8%A7%D9%84%D8%A3%D9%83%D8%A7%D8%AF%D9%8A%D9%85%D9%8A" target="_blank" rel="noopener noreferrer">
+              تحدث معنا عبر واتساب
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <span>© منظومة الحوكمة الرقمية للحضور الأكاديمي — جميع الحقوق محفوظة.</span>
+      <div class="footer-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="journey.html">الرحلة التعليمية</a>
+        <a href="lecturer.html">صفحة المحاضر</a>
+        <a href="coordinator.html">صفحة المنسق</a>
+        <a href="index.html#contact">طلب عرض توضيحي</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Conversion Bar -->
+  <div class="mobile-sticky-cta" id="mobile-sticky-cta" aria-label="اختصارات التواصل السريع">
+    <a class="btn btn-primary" href="index.html#contact">اطلب عرضاً توضيحياً</a>
+    <a class="btn btn-outline-light" data-cta-source="student_sticky_whatsapp" href="https://wa.me/201062091434?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%B9%D8%B1%D8%B6%20%D8%AA%D9%88%D8%B6%D9%8A%D8%AD%D9%8A%20%D9%84%D9%85%D9%86%D8%B8%D9%88%D9%85%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1%20%D8%A7%D9%84%D8%A3%D9%83%D8%A7%D8%AF%D9%8A%D9%85%D9%8A" target="_blank" rel="noopener noreferrer">
+      واتساب مباشر
+    </a>
+  </div>
+
+  <!-- Accessible Lightbox Modal for Real App Screenshot -->
+  <dialog class="gallery-modal" aria-label="معاينة مكبرة لشاشة تطبيق الطالب">
+    <button class="gallery-close" type="button" aria-label="إغلاق المعاينة">×</button>
+    <button class="gallery-prev" type="button" aria-label="الصورة السابقة">❯</button>
+    <figure>
+      <img src="assets/student-complaint.jpeg" alt="" width="720" height="1600">
+      <figcaption>
+        <span class="gallery-counter">1 / 1</span>
+        <span class="gallery-caption-text"></span>
+      </figcaption>
+    </figure>
+    <button class="gallery-next" type="button" aria-label="الصورة التالية">❮</button>
+  </dialog>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+/* الأثر الإداري: رؤية ثم تصرف ثم توثيق */
+.admin-impact { background: #fffdf8; padding-top: 94px; padding-bottom: 88px; }
+.admin-intro { align-items: end; display: flex; gap: 45px; justify-content: space-between; max-width: 1120px; }
+.admin-intro h2 { color: #0d3147; font-size: clamp(35px,4vw,54px); letter-spacing: -.055em; line-height: 1.25; margin: 0; }
+.admin-intro h2 em { color: #0d998d; font-style: normal; }
+.admin-intro > p { color: #587481; font-size: 14px; line-height: 2; margin: 0 0 4px; max-width: 405px; }
+.admin-model { display: grid; grid-template-columns: repeat(3,1fr); margin-top: 48px; }
+.admin-stage { border-left: 1px solid rgba(9,34,53,.12); min-height: 290px; padding: 25px 28px 23px; position: relative; }
+.admin-stage:first-child { border-left: 0; padding-right: 0; }
+.admin-stage:last-child { padding-left: 0; }
+.admin-icon { align-items: center; border-radius: 11px; display: flex; height: 45px; justify-content: center; width: 45px; }
+.admin-icon svg { height: 24px; width: 24px; }
+.stage-see .admin-icon { background: #e2f4f0; color: #09877d; }
+.stage-act .admin-icon { background: #e6f0f7; color: #226e97; }
+.stage-record .admin-icon { background: #ffebe4; color: #d25d43; }
+.stage-number { color: #91a6af; font-size: 11px; font-weight: 700; left: 2px; position: absolute; top: 28px; }
+.admin-stage h3 { color: #11384e; font-size: clamp(20px,2.1vw,25px); letter-spacing: -.04em; line-height: 1.35; margin: 29px 0 10px; }
+.admin-stage p { color: #5b7682; font-size: 12px; line-height: 1.9; margin: 0; max-width: 270px; }
+.admin-stage small { bottom: 24px; color: #0b8e83; font-size: 10px; font-weight: 700; position: absolute; }
+.admin-conclusion { align-items: center; background: #eff7f5; border-right: 3px solid #0e998d; display: flex; gap: 12px; margin-top: 27px; padding: 16px 19px; }
+.admin-conclusion span { align-items: center; background: #0e998d; border-radius: 50%; color: #fff; display: flex; flex: 0 0 auto; font-size: 12px; font-weight: 800; height: 24px; justify-content: center; width: 24px; }
+.admin-conclusion p { color: #254a5d; font-size: 13px; font-weight: 600; margin: 0; }
+@media (max-width:850px) { .admin-impact { padding-top: 70px; padding-bottom: 70px; } .admin-intro { align-items: start; flex-direction: column; gap: 14px; } .admin-model { margin-top: 34px; } .admin-stage { min-height: 300px; padding: 23px 18px; } .admin-stage:first-child { padding-right: 18px; } .admin-stage:last-child { padding-left: 18px; } .stage-number { left: 18px; } }
+@media (max-width:620px) { .admin-intro h2 { font-size: 35px; } .admin-intro > p { font-size: 12px; } .admin-model { grid-template-columns: 1fr; } .admin-stage { border-bottom: 1px solid rgba(9,34,53,.12); border-left: 0; min-height: 210px; padding: 22px 0; } .admin-stage:first-child { padding-right: 0; } .admin-stage:last-child { padding-left: 0; } .admin-stage small { bottom: 18px; } .stage-number { left: 0; top: 23px; } .admin-conclusion { align-items: start; margin-top: 20px; } }

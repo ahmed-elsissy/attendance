@@ -1,0 +1,30 @@
+/* معرض لوحات المتابعة: دليل بصري قابل للتصفح */
+.dashboard-gallery { background: #f1f6f4; display: block; padding: 95px clamp(24px, 9vw, 150px) 100px; }
+.dashboard-intro { align-items: end; display: flex; gap: 50px; justify-content: space-between; max-width: 1120px; }
+.dashboard-intro h2 { color: #103a50; font-size: clamp(35px, 4vw, 54px); letter-spacing: -.055em; line-height: 1.25; margin: 0; scroll-margin-top: 110px; }
+.dashboard-intro h2 em { color: #0b9b8d; font-style: normal; }
+.dashboard-intro > p { color: #56717d; font-size: 14px; line-height: 2; margin: 0 0 4px; max-width: 440px; }
+.dashboard-benefits { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); margin-top: 48px; }
+.dashboard-benefits article { background: #fff; border: 1px solid rgba(9,34,53,.09); border-radius: 12px; min-height: 138px; padding: 21px 21px 18px; }
+.dashboard-benefits span { color: #17a79a; font-size: 11px; font-weight: 800; }
+.dashboard-benefits h3 { color: #143e54; font-size: 18px; margin: 7px 0 3px; }
+.dashboard-benefits p { color: #647d87; font-size: 11px; line-height: 1.8; margin: 0; }
+.insights-gallery { margin-top: 51px; }
+.gallery-heading { align-items: baseline; display: flex; justify-content: space-between; margin-bottom: 16px; }
+.gallery-heading p { color: #133d51; font-size: 14px; font-weight: 700; margin: 0; }
+.gallery-heading span { color: #6d858e; font-size: 11px; }
+.gallery-grid { display: grid; gap: 14px; grid-template-columns: repeat(4, 1fr); }
+.gallery-item { appearance: none; background: #12242c; border: 1px solid rgba(9,34,53,.1); border-radius: 10px; cursor: zoom-in; overflow: hidden; padding: 0; position: relative; text-align: right; transition: transform .2s ease, box-shadow .2s ease; }
+.gallery-item:hover, .gallery-item:focus-visible { box-shadow: 0 15px 30px rgba(9,34,53,.19); outline: 2px solid #0ea497; outline-offset: 3px; transform: translateY(-4px); }
+.gallery-item img { aspect-ratio: 1.27 / 1; display: block; object-fit: cover; opacity: .92; transition: opacity .2s ease, transform .3s ease; width: 100%; }
+.gallery-item:hover img { opacity: 1; transform: scale(1.03); }
+.gallery-item span { background: linear-gradient(90deg, rgba(8,26,35,.93), rgba(8,26,35,.4)); bottom: 0; color: #fff; font-size: 10px; font-weight: 700; left: 0; padding: 20px 10px 9px; position: absolute; right: 0; }
+.gallery-item.featured { grid-column: span 2; }
+.gallery-item.featured img { aspect-ratio: 1.78 / 1; }
+.gallery-modal { background: #102f42; border: 1px solid rgba(255,255,255,.25); border-radius: 12px; box-shadow: 0 24px 70px rgba(0,0,0,.45); color: #fff; max-height: min(90vh, 760px); max-width: min(92vw, 980px); padding: 48px 56px 28px; }
+.gallery-modal::backdrop { background: rgba(3,18,27,.78); backdrop-filter: blur(4px); }
+.gallery-modal figure { margin: 0; }.gallery-modal figure img { display: block; max-height: calc(90vh - 115px); max-width: 100%; object-fit: contain; }.gallery-modal figcaption { color: #d5e9ea; font-size: 13px; margin-top: 12px; text-align: center; }
+.gallery-close, .gallery-prev, .gallery-next { align-items: center; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.26); border-radius: 50%; color: #fff; cursor: pointer; display: flex; font: inherit; height: 35px; justify-content: center; position: absolute; width: 35px; }
+.gallery-close { font-size: 25px; left: 13px; top: 11px; }.gallery-prev, .gallery-next { font-size: 18px; top: 50%; transform: translateY(-50%); }.gallery-prev { right: 12px; }.gallery-next { left: 12px; }
+@media (max-width: 850px) { .dashboard-gallery { padding-top: 70px; padding-bottom: 70px; }.dashboard-intro { align-items: start; flex-direction: column; gap: 15px; }.dashboard-benefits { margin-top: 34px; }.gallery-grid { grid-template-columns: repeat(2, 1fr); }.gallery-modal { padding-left: 48px; padding-right: 48px; } }
+@media (max-width: 520px) { .dashboard-intro h2 { font-size: 35px; }.dashboard-intro > p { font-size: 12px; }.dashboard-benefits { grid-template-columns: 1fr; }.dashboard-benefits article { min-height: auto; }.gallery-heading { align-items: start; flex-direction: column; gap: 3px; }.gallery-grid { gap: 10px; }.gallery-item.featured { grid-column: span 2; }.gallery-item span { font-size: 9px; }.gallery-modal { padding: 45px 35px 20px; }.gallery-prev { right: 4px; }.gallery-next { left: 4px; } }

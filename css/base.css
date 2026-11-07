@@ -1,0 +1,259 @@
+/* ==========================================================================
+   Base Reset, Typography, Motion & Print
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  line-height: 1.8;
+  overflow-x: clip;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: var(--fs-3xl);
+  font-weight: 800;
+  line-height: 1.24;
+  letter-spacing: -0.035em;
+  margin-bottom: var(--sp-5);
+}
+
+h2 {
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  line-height: 1.28;
+  letter-spacing: -0.035em;
+  margin-bottom: var(--sp-3);
+}
+
+h3 {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--sp-2);
+}
+
+h1 em,
+h2 em {
+  font-style: normal;
+}
+
+/* Subtle paper grain overlay */
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.022;
+  z-index: 5;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E");
+}
+
+/* Anchor scroll offset for sticky header */
+section[id] {
+  scroll-margin-top: calc(var(--topbar-h) + 14px);
+}
+
+/* Standard Section Shell */
+.section {
+  padding: var(--sp-9) var(--container-pad);
+}
+
+.section-inner {
+  max-width: var(--max-w);
+  margin-inline: auto;
+}
+
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--sp-7);
+  margin-bottom: var(--sp-7);
+}
+
+.section-head > div {
+  max-width: 650px;
+}
+
+.section-head > p {
+  max-width: 440px;
+  margin: 0 0 4px;
+  font-size: var(--fs-md);
+  line-height: 1.85;
+  color: var(--text-secondary);
+}
+
+.surface-dark .section-head > p,
+.surface-slate .section-head > p {
+  color: var(--on-dark-secondary);
+}
+
+/* Surfaces */
+.surface-dark {
+  background: var(--ink);
+  color: var(--on-dark-primary);
+}
+
+.surface-slate {
+  background: var(--ink-2);
+  color: var(--on-dark-primary);
+}
+
+.surface-cream {
+  background: var(--cream);
+  color: var(--text-primary);
+}
+
+.surface-paper {
+  background: var(--paper);
+  color: var(--text-primary);
+}
+
+.surface-mint {
+  background: var(--mint-surface);
+  color: var(--text-primary);
+}
+
+.surface-dark h2 em,
+.surface-slate h2 em {
+  color: var(--mint);
+}
+
+.surface-cream h2 em,
+.surface-paper h2 em,
+.surface-mint h2 em {
+  color: var(--teal-text);
+}
+
+/* Scroll Reveal (Progressive Enhancement: visible if JS doesn't run) */
+.js-enabled .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.js-enabled .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .js-enabled .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: var(--sp-8) var(--container-pad);
+  }
+
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--sp-3);
+    margin-bottom: var(--sp-6);
+  }
+
+  .section-head > p {
+    max-width: 100%;
+    font-size: var(--fs-sm);
+  }
+}
+
+/* Executive Handout Print Stylesheet */
+@media print {
+  .noise,
+  .skip-link,
+  .topbar,
+  .mobile-sticky-cta,
+  .hero-actions,
+  .mobile-lane-tabs,
+  .role-tablist,
+  .gallery-modal,
+  .contact-form-card {
+    display: none !important;
+  }
+
+  body,
+  .section,
+  .surface-dark,
+  .surface-slate,
+  .surface-cream,
+  .surface-mint,
+  .surface-paper {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 18px 0 !important;
+  }
+
+  .role-panel,
+  .process-lane {
+    display: grid !important;
+    opacity: 1 !important;
+    page-break-inside: avoid;
+    border: 1px solid #cccccc !important;
+    margin-bottom: 12px !important;
+  }
+}

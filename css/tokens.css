@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Design Tokens — منظومة الحوكمة الرقمية للحضور الأكاديمي
+   ========================================================================== */
+:root {
+  /* Core Surfaces */
+  --ink: #092235;
+  --ink-deep: #071a29;
+  --ink-2: #0d3149;
+  --ink-3: #123e59;
+  --paper: #fffdf8;
+  --cream: #f7f3ea;
+  --mint-surface: #edf6f4;
+  --white: #ffffff;
+
+  /* Brand & Accents (WCAG AA contrast-verified) */
+  --teal: #0ea497;          /* Decorative rings, borders, dark-bg icons */
+  --teal-solid: #087a70;    /* Solid button/card fill with #fff text (5.2:1) */
+  --teal-hover: #06665d;    /* Hover state for solid teal (6.4:1) */
+  --teal-text: #087268;     /* Teal text on light paper/cream/mint (5.1+:1) */
+  --mint: #9be4dc;          /* Accent text on dark ink (11.7:1) */
+  --mint-soft: #d8f3ee;     /* Light mint badge fill */
+  --coral: #d9583b;         /* Coral accent badge/border */
+  --coral-soft: #ffeae4;    /* Soft coral fill */
+  --coral-text: #a93c22;    /* Accessible coral text on light bg (6.1:1) */
+  --amber-soft: #fff4df;
+  --amber-text: #8a5300;
+
+  /* Text Hierarchy */
+  --text-primary: #092235;
+  --text-secondary: #375361; /* 7.4:1 on paper, 6.7:1 on cream */
+  --text-muted: #4a6674;     /* 5.5:1 on paper, 4.9:1 on cream */
+  --on-dark-primary: #ffffff;
+  --on-dark-secondary: #d4e5ed; /* 11.8:1 on ink */
+  --on-dark-muted: #b6cfdc;     /* 9.4:1 on ink */
+
+  /* Borders & Shadows */
+  --line-light: rgba(9, 34, 53, 0.12);
+  --line-strong: rgba(9, 34, 53, 0.2);
+  --line-on-dark: rgba(255, 255, 255, 0.15);
+  --shadow-sm: 0 6px 18px rgba(9, 34, 53, 0.06);
+  --shadow-md: 0 14px 34px rgba(9, 34, 53, 0.1);
+  --shadow-lg: 0 28px 64px rgba(5, 20, 32, 0.28);
+
+  /* Typography Scale (Minimum 13px / 0.8125rem across entire site) */
+  --font-sans: 'Alexandria', system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;
+  --fs-xs: 0.8125rem;   /* 13px — smallest allowed text */
+  --fs-sm: 0.9375rem;   /* 15px — standard UI, buttons, secondary copy */
+  --fs-md: 1.0625rem;   /* 17px — lead paragraphs, FAQ titles */
+  --fs-lg: 1.25rem;     /* 20px — card headings (h3) */
+  --fs-xl: 1.5rem;      /* 24px — prominent subheadings */
+  --fs-2xl: clamp(1.75rem, 3.2vw, 2.65rem); /* 28px – 42px section h2 */
+  --fs-3xl: clamp(2.15rem, 4.3vw, 3.5rem);  /* 34px – 56px hero h1 */
+
+  /* Spacing Scale */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 72px;
+  --sp-9: 92px;
+
+  /* Layout & Radii */
+  --container-pad: clamp(20px, 6.5vw, 120px);
+  --max-w: 1220px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+  --topbar-h: 78px;
+}

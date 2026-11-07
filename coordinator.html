@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تجربة المنسق الأكاديمي | منظومة الحوكمة الرقمية للحضور الأكاديمي</title>
+  <meta name="description" content="لوحة المنسق الأكاديمي ووحدة التعليم الإلكتروني: استيراد الجداول بصيغة Excel دفعة واحدة، مراقبة التزام الرصد والشكاوى المعلقة، واستخراج تقارير الأقسام والإنذارات والحرمان الجاهزة للقرار.">
+  <meta name="theme-color" content="#092235">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_EG">
+  <meta property="og:title" content="تجربة المنسق الأكاديمي | منظومة الحوكمة الرقمية للحضور الأكاديمي">
+  <meta property="og:description" content="إدارة الجداول الدراسية ومراقبة جودة الرصد وحسم البلاغات واستخراج تقارير الحرمان بدقة تتجاوز 98%.">
+  <meta property="og:image" content="assets/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="تجربة المنسق الأكاديمي | منظومة الحوكمة الرقمية للحضور الأكاديمي">
+  <meta name="twitter:description" content="مركز عمليات رقمي متكامل للمنسقين ووحدات التعليم الإلكتروني وشؤون الطلاب.">
+  <meta name="twitter:image" content="assets/og-cover.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Progressive Enhancement Flag -->
+  <script>document.documentElement.classList.add('js-enabled');</script>
+
+  <!-- Unified Stylesheet -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "تجربة المنسق الأكاديمي — منظومة الحوكمة الرقمية للحضور الأكاديمي",
+    "inLanguage": "ar",
+    "description": "استعراض تفصيلي لأدوات المنسق الأكاديمي ووحدة التعليم الإلكتروني في رفع الجداول ومراجعة السجلات وإصدار تقارير الالتزام والحرمان."
+  }
+  </script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">تخطي إلى المحتوى الرئيسي</a>
+
+  <!-- Unified Ecosystem Header -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html" aria-label="العودة إلى الصفحة الرئيسية للمنظومة">
+        <img class="brand-logo" src="assets/logo-112.png" alt="شعار منظومة الحوكمة الرقمية للحضور الأكاديمي" width="48" height="48">
+        <span>
+          منظومة الحوكمة الرقمية للحضور الأكاديمي
+          <small>لوحة المنسق الأكاديمي وضبط جودة التشغيل</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="التنقل بين صفحات المنظومة">
+        <a href="index.html">الرئيسية</a>
+        <a href="journey.html">الرحلة التعليمية</a>
+        <a href="lecturer.html">المحاضر</a>
+        <a href="student.html">الطالب</a>
+        <a href="coordinator.html" class="active" aria-current="page">المنسق</a>
+        <a href="index.html#results">نتائج الزقازيق</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <a class="btn btn-outline-light btn-sm header-whatsapp" data-cta-source="coordinator_header_whatsapp" href="https://wa.me/201062091434?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%84%D9%88%D8%AD%D8%A9%20%D8%A7%D9%84%D9%85%D9%86%D8%B3%D9%82%20%D8%A7%D9%84%D8%A3%D9%83%D8%A7%D8%AF%D9%8A%D9%85%D9%8A%20%D9%81%D9%8A%20%D9%85%D9%86%D8%B8%D9%88%D9%85%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1" target="_blank" rel="noopener noreferrer">
+          تواصل عبر واتساب
+        </a>
+        <a class="btn btn-primary btn-sm" href="index.html#contact">اطلب عرضاً توضيحياً</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="فتح القائمة الرئيسية">
+          <svg class="icon-burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =====================================================================
+         HERO: ACADEMIC COORDINATOR EXPERIENCE
+         ===================================================================== -->
+    <section class="sub-hero theme-coordinator" id="top">
+      <div class="sub-hero-inner">
+        <div>
+          <nav class="breadcrumb" aria-label="مسار الصفحة">
+            <a href="index.html">الرئيسية</a>
+            <span aria-hidden="true">/</span>
+            <span>صفحة المنسق الأكاديمي</span>
+          </nav>
+
+          <p class="eyebrow">مركز التشغيل وضبط الجودة • من الجدول حتى القرار</p>
+          <h1>تحكّم كامل في الجداول ومؤشرات الالتزام <em>دون غرق في ملفات متفرقة</em></h1>
+          <p class="hero-lead">
+            ينتقل دور المنسق الأكاديمي ووحدة التعليم الإلكتروني من مطاردة الكشوف الورقية وتفريغها يدوياً إلى إدارة غرفة عمليات ذكية ترفع الجداول دفعة واحدة، تراقب التزام الرصد، وتضمن جاهزية البيانات قبل استخراج أي قرار حرمان.
+          </p>
+
+          <div class="hero-stats" aria-label="مؤشرات تشغيل لوحة المنسق">
+            <div class="hero-stat">
+              <strong data-count="1069">1,069</strong>
+              <span>محاضرة وسكشن مدار عبر اللوحة</span>
+            </div>
+            <div class="hero-stat">
+              <strong>دفعة واحدة</strong>
+              <span>استيراد الجداول بصيغة Excel</span>
+            </div>
+            <div class="hero-stat">
+              <strong>+98%</strong>
+              <span>دقة السجلات المعتمدة للتقارير</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#inputs">استعرض أدوات المنسق</a>
+            <a class="btn btn-outline-light" href="index.html#contact">اطلب عرضاً لكليتك</a>
+          </div>
+        </div>
+
+        <!-- Bespoke Coordinator Operations Console -->
+        <div class="console-window" aria-label="معاينة توضيحية للوحة عمليات المنسق الأكاديمي">
+          <div class="console-topbar">
+            <span class="console-title">غرفة عمليات التنسيق الأكاديمي • لوحة الجاهزية</span>
+            <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <div class="console-body">
+            <div class="console-kpis">
+              <div class="console-kpi">
+                <strong>99.1%</strong>
+                <span>التزام رصد الجلسات</span>
+              </div>
+              <div class="console-kpi">
+                <strong>18 موديول</strong>
+                <span>مفعّل على الجدول</span>
+              </div>
+              <div class="console-kpi">
+                <strong>أقل من 24 س</strong>
+                <span>زمن حسم البلاغات</span>
+              </div>
+            </div>
+
+            <div class="ui-meter">
+              <div class="ui-meter-head">
+                <b>مؤشر جاهزية البيانات لإصدار قوائم الإنذار</b>
+                <span>مكتمل وجاهز للتصدير</span>
+              </div>
+              <div class="ui-meter-track">
+                <div class="ui-meter-fill" style="width: 98.4%"></div>
+              </div>
+            </div>
+
+            <div class="ui-list">
+              <div class="ui-row">
+                <b>استيراد جدول الأسبوع السابع (Excel)</b>
+                <span class="ui-chip chip-ok">تم التوزيع بنجاح</span>
+              </div>
+              <div class="ui-row">
+                <b>بلاغات معلقة تجاوزت 48 ساعة</b>
+                <span class="ui-chip chip-ok">صفر بلاغات متأخرة</span>
+              </div>
+              <div class="ui-row">
+                <b>تقرير التزام الأقسام والمحاضرين</b>
+                <span class="ui-chip chip-info">جاهز بصيغة Excel / PDF</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- In-Page Quick Jump Bar -->
+    <div class="subpage-jumpbar" aria-label="أقسام صفحة المنسق">
+      <div class="subpage-jumpbar-inner">
+        <span class="jumpbar-label">انتقل سريعاً إلى:</span>
+        <div class="jumpbar-links">
+          <a href="#inputs">01 صفحات الإدخال والجدول</a>
+          <a href="#overview">02 المراجعة العامة</a>
+          <a href="#records">03 السجلات التفصيلية</a>
+          <a href="#reports">04 التقارير الجاهزة للقرار</a>
+          <a href="#faq">الأسئلة الشائعة</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================================
+         01. INPUT PAGES: BULK EXCEL SCHEDULE IMPORT & MODULE SETUP
+         ===================================================================== -->
+    <section class="section surface-paper" id="inputs">
+      <div class="section-inner reveal">
+        <div class="split-feature">
+          <div class="split-copy">
+            <p class="eyebrow dark">01 • صفحات الإدخال والتجهيز</p>
+            <h2>ارفع الجدول الدراسي بصيغة Excel <em>وجهّز الموديولات دفعة واحدة</em></h2>
+            <p>
+              بدل إدخال كل محاضرة وسكشن يدوياً، تمنح المنظومة المنسق أدوات استيراد ذكية تفحص ملفات الجدول وتوزع الجلسات تلقائياً على حسابات المحاضرين والطلاب.
+            </p>
+
+            <div class="feature-rows">
+              <article class="feature-row-card">
+                <div class="icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>استيراد الجدول الإلكتروني وفحص التعارضات</h3>
+                  <p>رفع ملف Excel المعتمد من الكلية مع مراجعة فورية لأسماء المقررات والقاعات والمجموعات قبل النشر.</p>
+                </div>
+              </article>
+
+              <article class="feature-row-card">
+                <div class="icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>تجهيز الموديولات والأقسام ونسب اللوائح</h3>
+                  <p>ربط كل موديول بالأقسام العلمية المشاركة وتحديد نسب الإنذار والحرمان المعتمدة في لائحة البرنامج.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="split-visual">
+            <div class="ui-mockup" aria-label="نموذج شاشة استيراد ومراجعة الجدول للمنسق">
+              <div class="ui-mockup-bar">
+                <span class="ui-mockup-title">معالج استيراد الجداول • Excel Import</span>
+                <span class="ui-status-pill">تم التحقق الآلي</span>
+              </div>
+              <div class="ui-mockup-body">
+                <div class="ui-highlight-box">
+                  <div>
+                    <span>ملف: Schedule_Semester1_Med.xlsx</span>
+                    <strong>248 جلسة جاهزة للنشر</strong>
+                  </div>
+                  <span class="ui-chip chip-ok">0 أخطاء تنسيق</span>
+                </div>
+                <div class="ui-list">
+                  <div class="ui-row">
+                    <b>محاضرات نظرية بالمدرجات</b>
+                    <span class="ui-chip chip-ok">96 محاضرة</span>
+                  </div>
+                  <div class="ui-row">
+                    <b>سكاشن عملية وإكلينيكية بالمجموعات</b>
+                    <span class="ui-chip chip-ok">128 سكشن</span>
+                  </div>
+                  <div class="ui-row">
+                    <b>جلسات إلكترونية متزامنة (Teams)</b>
+                    <span class="ui-chip chip-info">24 جلسة</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         02. GENERAL REVIEW PAGES: LIVE MONITORING ACROSS MODULES
+         ===================================================================== -->
+    <section class="section surface-cream" id="overview">
+      <div class="section-inner reveal">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow dark">02 • صفحات المراجعة العامة</p>
+            <h2>بانوراما تشغيلية ترصد <em>انتظام الفصل الدراسي لحظة بلحظة</em></h2>
+          </div>
+          <p>
+            يرى المنسق الصورة الكلية لجميع الفرق والموديولات في شاشة واحدة، ليتدخل مبكراً قبل تفاقم أي فجوة في الرصد أو الغياب.
+          </p>
+        </div>
+
+        <div class="cap-grid-2">
+          <article class="cap-card">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/>
+              </svg>
+            </div>
+            <h3>نسبة غياب كل موديول ومقرر</h3>
+            <p>مقارنة حية لمعدلات الحضور والغياب بين الموديولات والفرق الدراسية لاكتشاف المقررات ذات الكثافة الأعلى في الغياب.</p>
+          </article>
+
+          <article class="cap-card">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/>
+              </svg>
+            </div>
+            <h3>متابعة التزام المحاضرين بالرصد</h3>
+            <p>فرز فوري للجلسات التي تم رصدها واعتمادها مقابل الجلسات المجدولة التي لم تُغلق بعد للتواصل السريع مع القسم المعني.</p>
+          </article>
+
+          <article class="cap-card">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <h3>مؤشر الشكاوى والبلاغات المعلقة</h3>
+            <p>متابعة مركزية لأعداد البلاغات المفتوحة في كل قسم لضمان عدم بقاء أي تظلم طلابي معلّقاً قبل إصدار القوائم.</p>
+          </article>
+
+          <article class="cap-card featured-dark">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+            </div>
+            <h3>الإنذارات المبكرة وموقف الحرمان</h3>
+            <p>حصر تلقائي للطلاب المقتربين من سقف الغياب المسموح به لإرسال تنبيهات الإرشاد الأكاديمي في التوقيت الصحيح.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         03. DETAILED AUDIT LOGS: FULL TRACEABILITY
+         ===================================================================== -->
+    <section class="section surface-slate" id="records">
+      <div class="section-inner reveal">
+        <div class="split-feature reverse">
+          <div class="split-copy">
+            <p class="eyebrow">03 • صفحات السجلات التفصيلية</p>
+            <h2>مرجعية تدقيق كاملة تجيب عن <em>من حضر ومتى وبأي صلاحية</em></h2>
+            <p>
+              عند الحاجة للتحقق من أي واقعة أو مراجعة تظلم رسمي، لا يبحث المنسق في أضابير ورقية؛ بل يفتح سجلاً إلكترونياً موثقاً بالثانية والتاريخ.
+            </p>
+
+            <div class="feature-rows">
+              <article class="feature-row-card">
+                <div class="icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>سجل الحضور التفصيلي حسب الموديول</h3>
+                  <p>يعرض لكل طالب الجلسات التي حضرها، توقيت الرصد، وسيلة التحقق (Bluetooth / NFC / Teams / Manual)، واسم المحاضر المسجِّل.</p>
+                </div>
+              </article>
+
+              <article class="feature-row-card">
+                <div class="icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>سجل الشكاوى وزمن الاستجابة</h3>
+                  <p>يرصد تاريخ تقديم كل بلاغ، حالته الراهنة، مدة بقائه دون حسم، والقرار المتخذ بشأنه لضمان العدالة وسرعة الإنجاز.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="split-visual">
+            <div class="console-window" aria-label="نموذج سجل التدقيق التفصيلي للمنسق">
+              <div class="console-topbar">
+                <span class="console-title">سجل التدقيق التفصيلي • موديول الجراحة</span>
+                <span class="ui-status-pill">فلترة فورية</span>
+              </div>
+              <div class="console-body">
+                <div class="ui-row">
+                  <div>
+                    <b>سلمى أشرف نبيل — جلسة 18 أكتوبر (10:04 ص)</b>
+                    <div><small>المسجِّل: أ.د. محمود سامي • القناة: Bluetooth</small></div>
+                  </div>
+                  <span class="ui-chip chip-ok">مؤكد</span>
+                </div>
+                <div class="ui-row">
+                  <div>
+                    <b>كريم وائل فوزي — جلسة 18 أكتوبر (10:19 ص)</b>
+                    <div><small>المسجِّل: د. نهى عادل • القناة: بطاقة NFC</small></div>
+                  </div>
+                  <span class="ui-chip chip-ok">مؤكد</span>
+                </div>
+                <div class="ui-row">
+                  <div>
+                    <b>بلاغ #1042 — مراجعة عذر طبي موثق</b>
+                    <div><small>زمن الاستجابة: 6 ساعات • تم القبول بواسطة المحاضر</small></div>
+                  </div>
+                  <span class="ui-chip chip-info">مغلق وموثق</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         04. DECISION-READY REPORTS + REAL ZAGAZIG SCREENSHOTS
+         ===================================================================== -->
+    <section class="section surface-paper" id="reports">
+      <div class="section-inner reveal">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow dark">04 • التقارير الجاهزة للقرار</p>
+            <h2>ثلاثة تقارير رسمية مستخرجة <em>بعد التحقق من جاهزية البيانات</em></h2>
+          </div>
+          <p>
+            لا تُستخرج قوائم الحرمان بصورة متسرعة؛ بل تمر عبر بوابة تحقق تضمن اكتمال رصد المحاضرات وحسم البلاغات المعلقة أولاً.
+          </p>
+        </div>
+
+        <div class="cap-grid-3">
+          <article class="cap-card">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
+            <h3>01 • تقرير التزام الأقسام</h3>
+            <p>يقيس نسبة تنفيذ ورصد الجلسات المجدولة لكل قسم علمي وموديول على مدار الأسابيع الدراسية.</p>
+            <ul class="pill-list">
+              <li>لمجلس الكلية</li>
+              <li>تصدير PDF / Excel</li>
+            </ul>
+          </article>
+
+          <article class="cap-card">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              </svg>
+            </div>
+            <h3>02 • تقرير التزام المحاضرين</h3>
+            <p>يوضح عدد الجلسات المسندة والمرصودة لكل عضو هيئة تدريس ومعدلات سرعة البت في بلاغات الطلاب.</p>
+            <ul class="pill-list">
+              <li>لرؤساء الأقسام</li>
+              <li>شفافية كاملة</li>
+            </ul>
+          </article>
+
+          <article class="cap-card featured-dark">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/>
+              </svg>
+            </div>
+            <h3>03 • تقرير الإنذارات والحرمان</h3>
+            <p>كشوف رسمية دقيقة بالطلاب المتجاوزين للنسب اللائحية بعد إغلاق جميع البلاغات المعلقة واعتماد السجلات.</p>
+            <ul class="pill-list">
+              <li>لشؤون الطلاب والكنترول</li>
+              <li>دقة +98%</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Real Operational Screenshots from Zagazig Deployment -->
+        <div class="real-shots-pair" aria-label="لقطات فعلية من لوحات تقارير المنسق">
+          <button class="real-shot-button wide-shot" type="button" data-full="assets/insight-5.jpg" data-caption="لقطة فعلية: جدول متابعة التزام الأقسام والمقررات برصد الجلسات المجدولة">
+            <img src="assets/insight-5.jpg" alt="لقطة حقيقية من لوحة متابعة التزام الأقسام والمقررات" width="1072" height="457" loading="lazy">
+            <span class="real-shot-caption">لقطة حقيقية: متابعة التزام الأقسام — اضغط للتكبير</span>
+          </button>
+
+          <button class="real-shot-button wide-shot" type="button" data-full="assets/insight-7.jpg" data-caption="لقطة فعلية: مؤشرات الإنذار الأكاديمي وحصر الطلاب المتجاوزين لنسب الغياب">
+            <img src="assets/insight-7.jpg" alt="لقطة حقيقية من لوحة قوائم الإنذار المبكر وحصر الغياب" width="1037" height="464" loading="lazy">
+            <span class="real-shot-caption">لقطة حقيقية: قوائم الإنذار والحرمان — اضغط للتكبير</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         05. COORDINATOR FAQ
+         ===================================================================== -->
+    <section class="section surface-mint" id="faq">
+      <div class="section-inner reveal">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow dark">أسئلة المنسقين والتعليم الإلكتروني</p>
+            <h2>إجابات عن <em>إدارة الجداول والاستثناءات والتقارير</em></h2>
+          </div>
+          <p>
+            كيف تتعامل لوحة المنسق مع التعديلات الطارئة وتعدد البرامج الأكاديمية.
+          </p>
+        </div>
+
+        <div class="faq-grid">
+          <details class="faq-item" open>
+            <summary>
+              <span>ماذا لو تغير موعد محاضرة أو مكانها بشكل طارئ خلال الأسبوع؟</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              يعدل المنسق توقيت أو قاعة الجلسة من لوحة التحكم في ثوانٍ، فينعكس التحديث تلقائياً في جدول كل من المحاضر وطلاب المجموعة دون الحاجة لإعادة رفع الملف بالكامل.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>هل تدعم المنظومة نظام الموديولات الطبية ونظام الساعات المعتمدة معاً؟</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              نعم؛ صُممت بنية المقررات بمرونة تدعم الموديولات التكاملية متعددة الأقسام (كما في كليات الطب)، وكذلك المقررات الفصلية والساعات المعتمدة في الكليات الهندسية والنظرية.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>كيف تمنع المنظومة صدور قرار حرمان لطالب لديه عذر قيد الفحص؟</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              تنبه بوابة الجاهزية المنسق فوراً بوجود أي جلسات غير مرصودة أو بلاغات طلابية معلقة لم تُحسم بعد، لضمان إغلاقها قبل استخراج الكشف النهائي للكنترول.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>ما الصيغ المتاحة لتصدير التقارير إلى شؤون الطلاب ومجلس الكلية؟</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              يمكن تصدير جميع السجلات والتقارير بصيغ Excel وCSV القياسية للمطابقة مع أنظمة الكنترول، وبصيغة تقارير منسقة جاهزة للطباعة والاعتماد الرسمي.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         ECOSYSTEM DIRECTORY & CLOSING CTA
+         ===================================================================== -->
+    <section class="section surface-cream" id="cta">
+      <div class="section-inner reveal">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow dark">تكامل الأدوار الأربعة</p>
+            <h2>تصفّح بقية محطات <em>منظومة الحوكمة الرقمية</em></h2>
+          </div>
+          <p>
+            لوحة المنسق هي حلقة الوصل التي تضبط تدفق البيانات بين القاعة الدراسية ومكتب عميد الكلية.
+          </p>
+        </div>
+
+        <div class="ecosystem-grid">
+          <a class="ecosystem-card" href="journey.html">
+            <div class="ecosystem-card-top">
+              <span>المسار الكامل • 5 محطات</span>
+              <h3>الرحلة التعليمية الرقمية</h3>
+              <p>كيف تترابط مهام المنسق والمحاضر والطالب والإدارة في مسار واحد.</p>
+            </div>
+            <span class="ecosystem-link-label">استعرض الرحلة ←</span>
+          </a>
+
+          <a class="ecosystem-card" href="lecturer.html">
+            <div class="ecosystem-card-top">
+              <span>التنفيذ داخل القاعة</span>
+              <h3>صفحة المحاضر</h3>
+              <p>كيف يرصد عضو هيئة التدريس الجلسات ويحسم البلاغات بمرونة.</p>
+            </div>
+            <span class="ecosystem-link-label">استكشف صفحة المحاضر ←</span>
+          </a>
+
+          <a class="ecosystem-card" href="student.html">
+            <div class="ecosystem-card-top">
+              <span>تجربة المستفيد الأول</span>
+              <h3>صفحة الطالب</h3>
+              <p>الجدول الذكي، تسجيل الحضور، متابعة النسب، والبلاغ الإلكتروني.</p>
+            </div>
+            <span class="ecosystem-link-label">استكشف صفحة الطالب ←</span>
+          </a>
+
+          <div class="ecosystem-card is-current" aria-current="page">
+            <div class="ecosystem-card-top">
+              <span>أنت تتصفح الآن</span>
+              <h3>صفحة المنسق الأكاديمي</h3>
+              <p>استيراد الجداول ومراقبة الجودة واستخراج التقارير الرسمية.</p>
+            </div>
+            <span class="ecosystem-link-label">الصفحة الحالية</span>
+          </div>
+        </div>
+
+        <div class="subpage-cta-box" style="margin-top: var(--sp-7);">
+          <div>
+            <h2>امنح وحدة التنسيق وشؤون التعليم أداة دقيقة بلا عبء ورقي</h2>
+            <p>نستعرض مع فريقكم في جلسة مباشرة كيفية رفع جدول كليتكم الفعلي واستخراج تقارير الالتزام والإنذارات.</p>
+          </div>
+          <div class="subpage-cta-actions">
+            <a class="btn btn-primary" href="index.html#contact">اطلب عرضاً توضيحياً</a>
+            <a class="btn btn-outline-light" data-cta-source="coordinator_bottom_whatsapp" href="https://wa.me/201062091434?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D9%86%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B9%D8%B1%D8%B6%20%D8%AA%D9%88%D8%B6%D9%8A%D8%AD%D9%8A%20%D9%84%D9%84%D9%88%D8%AD%D8%A9%20%D8%A7%D9%84%D9%85%D9%86%D8%B3%D9%82%20%D9%81%D9%8A%20%D9%85%D9%86%D8%B8%D9%88%D9%85%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1%20%D8%A7%D9%84%D8%A3%D9%83%D8%A7%D8%AF%D9%8A%D9%85%D9%8A" target="_blank" rel="noopener noreferrer">
+              تحدث معنا عبر واتساب
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <span>© منظومة الحوكمة الرقمية للحضور الأكاديمي — جميع الحقوق محفوظة.</span>
+      <div class="footer-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="journey.html">الرحلة التعليمية</a>
+        <a href="lecturer.html">صفحة المحاضر</a>
+        <a href="student.html">صفحة الطالب</a>
+        <a href="index.html#contact">طلب عرض توضيحي</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Conversion Bar -->
+  <div class="mobile-sticky-cta" id="mobile-sticky-cta" aria-label="اختصارات التواصل السريع">
+    <a class="btn btn-primary" href="index.html#contact">اطلب عرضاً توضيحياً</a>
+    <a class="btn btn-outline-light" data-cta-source="coordinator_sticky_whatsapp" href="https://wa.me/201062091434?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%B9%D8%B1%D8%B6%20%D8%AA%D9%88%D8%B6%D9%8A%D8%AD%D9%8A%20%D9%84%D9%85%D9%86%D8%B8%D9%88%D9%85%D8%A9%20%D8%A7%D9%84%D8%AD%D8%B6%D9%88%D8%B1%20%D8%A7%D9%84%D8%A3%D9%83%D8%A7%D8%AF%D9%8A%D9%85%D9%8A" target="_blank" rel="noopener noreferrer">
+      واتساب مباشر
+    </a>
+  </div>
+
+  <!-- Accessible Lightbox Modal for Real Coordinator Dashboard Shots -->
+  <dialog class="gallery-modal" aria-label="معاينة مكبرة للوحة تقارير المنسق">
+    <button class="gallery-close" type="button" aria-label="إغلاق المعاينة">×</button>
+    <button class="gallery-prev" type="button" aria-label="الصورة السابقة">❯</button>
+    <figure>
+      <img src="assets/insight-5.jpg" alt="" width="1072" height="457">
+      <figcaption>
+        <span class="gallery-counter">1 / 2</span>
+        <span class="gallery-caption-text"></span>
+      </figcaption>
+    </figure>
+    <button class="gallery-next" type="button" aria-label="الصورة التالية">❮</button>
+  </dialog>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

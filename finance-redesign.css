@@ -1,0 +1,27 @@
+/* الأثر المالي: مصادر وفر قابلة للقياس محليًا */
+.finance-value { background: #edf6f5; display: block; padding-top: 94px; padding-bottom: 92px; }
+.finance-value-intro { align-items: end; display: flex; justify-content: space-between; gap: 45px; max-width: 1120px; }
+.finance-value-intro > div { flex: 1 1 56%; min-width: 0; }
+.finance-value-intro h2 { color: #0e3348; font-size: clamp(34px,3.5vw,48px); letter-spacing: -.055em; line-height: 1.25; margin: 0; }
+.finance-value-intro h2 em { color: #0b978b; font-style: normal; }
+.finance-value-intro > p { color: #587681; flex: 0 1 390px; font-size: 14px; line-height: 2; margin: 0 0 5px; max-width: 390px; }
+.value-sources { display: grid; gap: 14px; grid-template-columns: repeat(3,1fr); margin-top: 40px; }
+.value-sources article { background: rgba(255,255,255,.78); border: 1px solid rgba(9,34,53,.1); border-radius: 11px; min-height: 264px; padding: 24px 26px; position: relative; }
+.value-sources article:not(:first-child) { border-right: 1px solid rgba(9,34,53,.1); }
+.value-icon { align-items: center; border-radius: 11px; display: flex; height: 44px; justify-content: center; width: 44px; }
+.value-icon svg { height: 23px; width: 23px; }
+.print-icon { background: #fff0e8; color: #ce654b; }.work-icon { background: #e2f2f0; color: #0a887e; }.time-icon { background: #e4eef7; color: #286f98; }
+.value-number { color: #8ba3ad; font-size: 11px; font-weight: 700; left: 26px; position: absolute; top: 29px; }
+.value-sources h3 { color: #12394f; font-size: clamp(19px,2vw,24px); letter-spacing: -.04em; line-height: 1.4; margin: 25px 0 10px; }
+.value-sources p { color: #5b7783; font-size: 12px; line-height: 1.9; margin: 0; max-width: 275px; }
+.value-sources small { color: #0c9084; display: block; font-size: 10px; font-weight: 700; margin-top: 14px; }
+.value-formula { align-items: center; background: #103a50; border-radius: 13px; color: #fff; display: grid; gap: 34px; grid-template-columns: .62fr 1.38fr; margin-top: 29px; padding: 28px 31px; }
+.value-formula p { color: #9fe8df; font-size: 10px; font-weight: 700; margin: 0 0 4px; }
+.value-formula h3 { color: #fff; font-size: 21px; letter-spacing: -.035em; line-height: 1.35; margin: 0; }
+.formula-terms { align-items: stretch; display: flex; gap: 11px; justify-content: space-between; }
+.formula-terms > span { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1); border-radius: 7px; color: #d8ebed; font-size: 11px; line-height: 1.65; padding: 11px 13px; text-align: center; }
+.formula-terms i { align-self: center; color: #8ee3da; font-size: 22px; font-style: normal; }
+.formula-terms b { align-self: center; color: #8ee3da; font-size: 22px; }
+.formula-terms strong { background: #0f8d83; border-radius: 7px; color: #fff; font-size: 12px; line-height: 1.6; padding: 11px 14px; text-align: center; }
+@media(max-width:850px) { .finance-value { padding-top: 70px; padding-bottom: 70px; } .finance-value-intro { align-items: start; flex-direction: column; gap: 14px; } .value-sources { margin-top: 34px; } .value-sources article { min-height: 275px; padding: 23px 18px; } .value-sources article:not(:first-child) { border-right: 1px solid rgba(9,34,53,.1); } .value-number { left: 18px; } .value-formula { grid-template-columns: 1fr; gap: 20px; } }
+@media(max-width:620px) { .finance-value-intro h2 { font-size: 35px; } .finance-value-intro > p { font-size: 12px; } .value-sources { grid-template-columns: 1fr; } .value-sources article { border-bottom: 1px solid rgba(9,34,53,.1); min-height: auto; padding: 22px 18px; } .value-sources article:not(:first-child) { border-right: 1px solid rgba(9,34,53,.1); } .value-number { left: 18px; top: 25px; } .value-formula { border-radius: 10px; margin-top: 20px; padding: 23px 18px; } .formula-terms { flex-wrap: wrap; gap: 7px; } .formula-terms > span { flex: 1 1 28%; font-size: 10px; padding: 9px 6px; } .formula-terms i, .formula-terms b { font-size: 16px; } .formula-terms strong { flex: 1 1 100%; } }
