@@ -232,35 +232,9 @@
           </div>
 
           <div class="split-visual">
-            <div class="ui-mockup" aria-label="نموذج خريطة المقررات والأقسام للطالب">
-              <div class="ui-mockup-bar">
-                 <span class="ui-mockup-title">نموذج توضيحي • مقررات الفصل الحالي</span>
-                 <span class="ui-status-pill">حسب لائحة الكلية</span>
-              </div>
-              <div class="ui-mockup-body">
-                <div class="ui-row">
-                  <div>
-                    <b>موديول الجهاز القلبي الوعائي</b>
-                    <div><small>الأقسام: الباطنة • الفسيولوجي • الفارماكولوجي</small></div>
-                  </div>
-                   <span class="ui-chip chip-ok">حسب خطة المقرر</span>
-                </div>
-                <div class="ui-row">
-                  <div>
-                    <b>موديول الجراحة العامة والطوارئ</b>
-                    <div><small>الأقسام: الجراحة • التخدير • الأشعة التشخيصية</small></div>
-                  </div>
-                   <span class="ui-chip chip-ok">حسب خطة المقرر</span>
-                </div>
-                <div class="ui-row">
-                  <div>
-                    <b>موديول طب الأطفال وحديثي الولادة</b>
-                    <div><small>الأقسام: الأطفال • التغذية الإكلينيكية</small></div>
-                  </div>
-                   <span class="ui-chip chip-info">حسب خطة المقرر</span>
-                </div>
-              </div>
-            </div>
+            <figure class="app-screen-card" aria-label="خريطة المقررات والأقسام للطالب">
+              <img src="assets/app-student-paths.png" alt="واجهة تطبيق الطالب لعرض المقررات والموديولات المسجلة في الفصل الحالي" width="591" height="1280" loading="lazy">
+            </figure>
           </div>
         </div>
       </div>
@@ -399,6 +373,12 @@
              <span class="method-badge">مسار موثق للحالات الاستثنائية</span>
           </article>
         </div>
+
+        <div class="section-below-visual" aria-label="شاشة اختيار طريقة تسجيل الحضور في تطبيق الطالب">
+          <figure class="app-screen-card">
+            <img src="assets/app-student-checkin-method.png" alt="شاشة اختيار وسيلة تسجيل الحضور عبر NFC أو Bluetooth في تطبيق الطالب" width="591" height="1280" loading="lazy">
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -428,42 +408,13 @@
           </div>
 
           <div class="split-visual">
-            <div class="console-window" aria-label="لوحة مؤشرات الغياب والإنذارات للطالب">
-              <div class="console-topbar">
-               <span class="console-title">نموذج توضيحي • سجل الحضور والإنذارات</span>
-               <span class="ui-status-pill">الحد اللائحي تحدده الكلية</span>
-              </div>
-              <div class="console-body">
-                <div class="ui-meter">
-                  <div class="ui-meter-head">
-                     <b>المقرر الأول</b>
-                     <span>ضمن الحدود اللائحية</span>
-                  </div>
-                  <div class="ui-meter-track">
-                    <div class="ui-meter-fill" style="width: 95.7%"></div>
-                  </div>
-                </div>
-
-                <div class="ui-meter">
-                  <div class="ui-meter-head">
-                     <b>المقرر الثاني</b>
-                     <span>موقف الحضور ظاهر للطالب</span>
-                  </div>
-                  <div class="ui-meter-track">
-                    <div class="ui-meter-fill" style="width: 90%"></div>
-                  </div>
-                </div>
-
-                <div class="ui-meter">
-                  <div class="ui-meter-head">
-                     <b>المقرر الثالث</b>
-                     <span>يظهر التنبيه عند اقتراب الحد</span>
-                  </div>
-                  <div class="ui-meter-track">
-                    <div class="ui-meter-fill warn" style="width: 81.3%"></div>
-                  </div>
-                </div>
-              </div>
+            <div class="role-visual-wrap role-visual-pair" aria-label="سجل الحضور والإنذارات والجلسات في تطبيق الطالب">
+              <figure class="app-screen-card">
+                <img src="assets/app-student-absence-details.png" alt="شاشة نسبة الغياب وحالة الإنذارات وإحصائيات المحاضرات في تطبيق الطالب" width="590" height="1280" loading="lazy">
+              </figure>
+              <figure class="app-screen-card">
+                <img src="assets/app-student-absent-sessions.png" alt="شاشة قائمة الجلسات وحالة الغياب مع خيار تقديم بلاغ" width="591" height="1280" loading="lazy">
+              </figure>
             </div>
           </div>
         </div>
@@ -512,9 +463,8 @@
 
           <!-- Real Sanitized App Screenshot from Zagazig Deployment -->
           <div class="split-visual">
-            <button class="real-shot-button" type="button" data-full="assets/student-complaint.jpeg" data-caption="لقطة فعلية من شاشة تقديم ومتابعة البلاغات الإلكترونية داخل تطبيق الطالب">
-              <img src="assets/student-complaint.jpeg" alt="لقطة حقيقية من تطبيق الطالب توضح شاشة البلاغ الإلكتروني وحالته" width="720" height="1600" loading="lazy">
-              <span class="real-shot-caption">لقطة حقيقية من التطبيق — اضغط للتكبير</span>
+            <button class="real-shot-button clean-shot-button" type="button" data-full="assets/app-student-complaint-form.png" data-caption="لقطة فعلية من شاشة تقديم ومتابعة البلاغات الإلكترونية داخل تطبيق الطالب">
+              <img src="assets/app-student-complaint-form.png" alt="لقطة حقيقية من تطبيق الطالب توضح شاشة تقديم البلاغ الإلكتروني وتفاصيله" width="402" height="1280" loading="lazy">
             </button>
           </div>
         </div>
@@ -676,7 +626,7 @@
     <button class="gallery-close" type="button" aria-label="إغلاق المعاينة">×</button>
     <button class="gallery-prev" type="button" aria-label="الصورة السابقة">❯</button>
     <figure>
-          <img src="assets/student-complaint.jpeg" alt="" width="720" height="1600" loading="lazy">
+          <img src="assets/app-student-complaint-form.png" alt="" width="402" height="1280" loading="lazy">
       <figcaption>
         <span class="gallery-counter">1 / 1</span>
         <span class="gallery-caption-text"></span>

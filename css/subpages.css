@@ -825,3 +825,106 @@ a.ecosystem-card:hover {
     width: 100%;
   }
 }
+
+/* ==========================================================================
+   App Screen Showcase Containers (Single, Pair, Trio, Mixed & Below-Cards)
+   ========================================================================== */
+.role-visual-wrap,
+.stage-visual-wrap,
+.section-below-visual {
+  width: 100%;
+}
+
+.app-screen-card {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 22px;
+  border: 5px solid var(--ink-2);
+  background: var(--ink-deep);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.app-screen-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.app-screen-card.wide-screen-card {
+  max-width: 100%;
+  border-radius: 14px;
+  border-width: 4px;
+}
+
+.role-visual-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.role-visual-pair .app-screen-card {
+  max-width: 265px;
+}
+
+.role-visual-trio {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  align-items: start;
+}
+
+.role-visual-trio .wide-screen-card {
+  grid-column: 1 / -1;
+}
+
+.role-visual-trio .app-screen-card:not(.wide-screen-card) {
+  max-width: 255px;
+}
+
+.role-visual-mixed {
+  display: grid;
+  grid-template-columns: minmax(0, 1.32fr) minmax(0, 0.68fr);
+  gap: 16px;
+  align-items: center;
+}
+
+.role-visual-mixed .app-screen-card:not(.wide-screen-card) {
+  max-width: 240px;
+}
+
+.section-below-visual {
+  margin-top: var(--sp-6);
+  display: flex;
+  justify-content: center;
+}
+
+.section-below-visual .app-screen-card {
+  max-width: 310px;
+}
+
+.section-below-visual.wide-below-visual .app-screen-card {
+  max-width: 960px;
+  width: 100%;
+}
+
+.real-shot-button.clean-shot-button {
+  max-width: 290px;
+}
+
+@media (max-width: 600px) {
+  .role-visual-pair,
+  .role-visual-trio,
+  .role-visual-mixed {
+    grid-template-columns: 1fr;
+  }
+
+  .role-visual-pair .app-screen-card,
+  .role-visual-trio .app-screen-card:not(.wide-screen-card),
+  .role-visual-mixed .app-screen-card:not(.wide-screen-card),
+  .section-below-visual .app-screen-card:not(.wide-screen-card) {
+    max-width: 280px;
+  }
+}
