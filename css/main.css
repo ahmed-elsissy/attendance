@@ -53,7 +53,7 @@
 --radius-md: 12px;
 --radius-lg: 18px;
 --radius-pill: 999px;
---topbar-h: 78px;
+--topbar-h: 84px;
 }
 *,
 *::before,
@@ -357,9 +357,9 @@ position: sticky;
 top: 0;
 z-index: 100;
 height: var(--topbar-h);
-background: rgba(9, 34, 53, 0.96);
-backdrop-filter: blur(14px);
-border-bottom: 1px solid var(--line-on-dark);
+background: linear-gradient(105deg, rgba(7, 29, 47, 0.985), rgba(11, 52, 70, 0.97));
+backdrop-filter: blur(18px);
+border-bottom: 1px solid rgba(186, 232, 226, 0.16);
 color: var(--white);
 }
 .topbar-inner {
@@ -380,20 +380,21 @@ max-width: calc(var(--max-w) + 2 * var(--container-pad));
 .brand {
 display: flex;
 align-items: center;
-gap: 12px;
+gap: 10px;
 font-size: var(--fs-sm);
 font-weight: 700;
 line-height: 1.35;
 flex-shrink: 0;
 }
 .brand-logo {
-width: 48px;
-height: 48px;
+width: 46px;
+height: 46px;
 object-fit: contain;
 flex: 0 0 auto;
 background: rgba(255, 255, 255, 0.95);
-border-radius: 10px;
-padding: 3px;
+border-radius: 13px;
+padding: 4px;
+box-shadow: 0 5px 14px rgba(0, 0, 0, 0.14);
 }
 .brand small {
 display: block;
@@ -402,49 +403,88 @@ font-weight: 400;
 color: var(--on-dark-muted);
 }
 .brand-name {
-  color: var(--white);
-  font-size: clamp(13px, 1.25vw, 17px);
-  font-weight: 700;
-  line-height: 1.25;
-  white-space: nowrap;
+color: var(--white);
+font-size: clamp(13px, 1.25vw, 17px);
+font-weight: 700;
+line-height: 1.25;
+white-space: nowrap;
+letter-spacing: -0.02em;
 }
 .main-nav {
 display: flex;
 align-items: center;
-gap: clamp(14px, 1.5vw, 22px);
+gap: 4px;
+min-width: 0;
+padding: 5px;
+border: 1px solid rgba(196, 234, 229, 0.12);
+border-radius: var(--radius-pill);
+background: rgba(255, 255, 255, 0.055);
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+.nav-group {
+display: flex;
+align-items: center;
+gap: 2px;
+}
+.nav-group-roles {
+padding-inline: 5px;
+border-inline: 1px solid rgba(196, 234, 229, 0.16);
+}
+.nav-group-label {
+padding-inline: 5px 4px;
+font-size: var(--fs-xs);
+font-weight: 500;
+color: var(--on-dark-muted);
+white-space: nowrap;
 }
 .main-nav a {
 position: relative;
-padding: 8px 0;
+padding: 8px;
+border-radius: var(--radius-pill);
 font-size: var(--fs-xs);
 font-weight: 600;
 color: var(--on-dark-secondary);
 white-space: nowrap;
-transition: color 0.2s ease;
+transition: color 0.2s ease, background 0.2s ease;
 }
 .main-nav a::after {
-content: "";
-position: absolute;
-right: 0;
-bottom: 0;
-width: 0;
-height: 2px;
-background: var(--mint);
-transition: width 0.2s ease;
+display: none;
 }
 .main-nav a:hover,
 .main-nav a.active {
 color: var(--mint);
+background: rgba(72, 197, 183, 0.13);
 }
 .main-nav a:hover::after,
 .main-nav a.active::after {
-width: 100%;
+width: 0;
 }
 .topbar-actions {
 display: flex;
 align-items: center;
 gap: 10px;
 flex-shrink: 0;
+}
+.header-whatsapp {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+min-height: 40px;
+padding: 9px 15px;
+border: 1px solid transparent;
+border-radius: var(--radius-pill);
+background: var(--mint);
+color: var(--ink-deep);
+font-size: var(--fs-xs);
+font-weight: 700;
+white-space: nowrap;
+box-shadow: 0 5px 16px rgba(36, 189, 174, 0.18);
+transition: transform 0.2s ease, background 0.2s ease;
+}
+.header-whatsapp:hover {
+color: var(--ink-deep);
+background: var(--white);
+transform: translateY(-1px);
 }
 @media (max-width: 1480px) {
 .topbar-actions .header-whatsapp {
@@ -492,20 +532,39 @@ flex-direction: column;
 align-items: stretch;
 gap: 0;
 background: var(--ink-deep);
-border-bottom: 1px solid var(--line-on-dark);
-padding: 12px var(--container-pad) 20px;
+border: 1px solid var(--line-on-dark);
+border-top: 0;
+border-radius: 0 0 var(--radius-md) var(--radius-md);
+padding: 12px var(--container-pad) 18px;
 box-shadow: var(--shadow-lg);
 }
 .main-nav.is-open {
 display: flex;
 }
+.nav-group {
+display: flex;
+flex-direction: column;
+align-items: stretch;
+gap: 0;
+}
+.nav-group-core,
+.nav-group-roles {
+padding: 0 0 8px;
+margin-bottom: 8px;
+border: 0;
+border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+.nav-group-label {
+display: block;
+padding: 7px 4px 5px;
+font-size: var(--fs-xs);
+color: var(--mint);
+}
 .main-nav a {
 font-size: var(--fs-sm);
-padding: 13px 4px;
-border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-.main-nav a:last-child {
+padding: 12px 8px;
 border-bottom: 0;
+border-radius: var(--radius-sm);
 }
 .main-nav a::after {
 display: none;
@@ -534,9 +593,6 @@ letter-spacing: -0.03em;
 }
 .topbar-actions {
 margin-inline-start: auto;
-}
-.topbar-actions .btn-primary {
-display: none;
 }
 }
 .icon-box {
