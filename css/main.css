@@ -401,6 +401,13 @@ font-size: var(--fs-xs);
 font-weight: 400;
 color: var(--on-dark-muted);
 }
+.brand-name {
+  color: var(--white);
+  font-size: clamp(13px, 1.25vw, 17px);
+  font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;
+}
 .main-nav {
 display: flex;
 align-items: center;
@@ -1664,6 +1671,65 @@ transition: opacity 0.2s ease, transform 0.3s ease;
 opacity: 1;
 transform: scale(1.02);
 }
+.operations-gallery {
+  display: flex;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 2px;
+  gap: 14px;
+  padding: 2px 2px 14px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--teal-solid, #087a70) transparent;
+}
+.operations-gallery .gallery-item,
+.operations-gallery .gallery-item.featured,
+.operations-gallery .gallery-item.wide-table {
+  flex: 0 0 clamp(250px, 29vw, 360px);
+  min-height: 270px;
+  scroll-snap-align: start;
+  grid-column: auto;
+}
+.operations-gallery .gallery-item img,
+.operations-gallery .gallery-item.featured img,
+.operations-gallery .gallery-item.wide-table img {
+  height: 270px;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: #141c22;
+}
+.gallery-bar > div:first-child {
+  display: grid;
+  gap: 4px;
+}
+.gallery-controls {
+  display: flex;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+.gallery-scroll-control {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  color: var(--teal-solid, #087a70);
+  background: var(--white);
+  cursor: pointer;
+  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+.gallery-scroll-control:hover,
+.gallery-scroll-control:focus-visible {
+  border-color: var(--teal-solid, #087a70);
+  background: var(--mint);
+  transform: translateY(-2px);
+}
+.gallery-scroll-control svg {
+  width: 20px;
+  height: 20px;
+}
 .gallery-item.featured {
 grid-column: span 2;
 }
@@ -1721,6 +1787,26 @@ scroll-snap-align: center;
 aspect-ratio: 1.55 / 1;
 object-fit: contain;
 background: #17181a;
+}
+.operations-gallery {
+margin-inline: calc(-1 * var(--container-pad));
+padding-inline: var(--container-pad);
+}
+.operations-gallery .gallery-item,
+.operations-gallery .gallery-item.featured,
+.operations-gallery .gallery-item.wide-table {
+flex-basis: 82%;
+}
+.operations-gallery .gallery-item img,
+.operations-gallery .gallery-item.featured img,
+.operations-gallery .gallery-item.wide-table img {
+height: 260px;
+}
+.gallery-bar {
+align-items: center;
+}
+.gallery-bar span {
+line-height: 1.7;
 }
 }
 .results-grid {

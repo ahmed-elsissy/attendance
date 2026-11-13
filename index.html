@@ -34,7 +34,6 @@
 
   <!-- Unified Stylesheet -->
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/print.css">
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -88,12 +87,9 @@
   <!-- Sticky Header -->
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="#top" aria-label="منظومة الحوكمة الرقمية للحضور الأكاديمي — العودة لأعلى الصفحة">
+      <a class="brand" href="#top" aria-label="منظومة حوكمة التعليم الرقمية — العودة لأعلى الصفحة">
         <img class="brand-logo" src="assets/logo-112.png" alt="شعار منظومة الحوكمة الرقمية للحضور الأكاديمي" width="48" height="48">
-        <span>
-          منظومة الحوكمة الرقمية للحضور الأكاديمي
-          <small>منصة جامعية ذكية لإدارة الحضور والالتزام الأكاديمي</small>
-        </span>
+        <span class="brand-name">منظومة حوكمة التعليم الرقمية</span>
       </a>
 
       <nav class="main-nav" id="main-nav" aria-label="التنقل الرئيسي">
@@ -122,76 +118,6 @@
   </header>
 
   <main id="main-content">
-    <!-- Print-only executive brief, shown when using "طباعة الملخص التنفيذي". -->
-    <section class="print-executive-summary" aria-label="ملخص تنفيذي قابل للطباعة">
-      <header class="print-summary-header">
-        <div class="print-brand">
-          <img src="assets/logo-112.png" alt="شعار منظومة الحوكمة الرقمية للحضور الأكاديمي" width="56" height="56" loading="lazy">
-          <div>
-            <strong>منظومة الحوكمة الرقمية للحضور الأكاديمي</strong>
-            <span>إيملي نوتس للتدريب</span>
-          </div>
-        </div>
-        <span class="print-document-label">ملخص تنفيذي</span>
-      </header>
-
-      <div class="print-summary-hero">
-        <p>تجربة تشغيل فعلية في كلية الطب البشري بجامعة الزقازيق</p>
-        <h1>حضور أوضح، وقت أقل، وقرار يمكن الرجوع إلى سجله</h1>
-        <span>من الجدول الدراسي وتسجيل الحضور، إلى متابعة الغياب والبلاغات والتقارير في مسار واحد.</span>
-      </div>
-
-      <div class="print-stat-grid" aria-label="مؤشرات التجربة التشغيلية">
-        <div><strong>572,243</strong><span>عملية حضور موثقة</span></div>
-        <div><strong>8,242</strong><span>طالباً وطالبة</span></div>
-        <div><strong>700</strong><span>عضو هيئة تدريس ومعاون</span></div>
-        <div><strong>1,069</strong><span>محاضرة وسكشن</span></div>
-      </div>
-
-      <div class="print-content-grid">
-        <section class="print-summary-section print-journey-section">
-          <p class="print-section-label">مسار العمل</p>
-          <h2>من الجدول إلى التقرير في أربع خطوات</h2>
-          <ol class="print-steps">
-            <li><b>المنسق</b><span>يرفع جدول Excel ويراجعه قبل النشر.</span></li>
-            <li><b>المحاضر</b><span>يسجل الحضور بالطريقة المناسبة للجلسة.</span></li>
-            <li><b>الطالب</b><span>يتابع موقفه ويقدم بلاغاً عند الحاجة.</span></li>
-            <li><b>الإدارة</b><span>تراجع السجلات والبلاغات قبل التقارير.</span></li>
-          </ol>
-        </section>
-
-        <section class="print-summary-section">
-          <p class="print-section-label">طرق الرصد</p>
-          <h2>خمس طرق تناسب بيئة الكلية</h2>
-          <div class="print-methods">
-            <span>Bluetooth داخل القاعة</span>
-            <span>NFC عند نقطة الدخول</span>
-            <span>القائمة الإلكترونية</span>
-            <span>استيراد Microsoft Teams</span>
-            <span>Manual للحالات الاستثنائية</span>
-          </div>
-        </section>
-      </div>
-
-      <section class="print-summary-section print-outcome-section">
-        <div>
-          <p class="print-section-label">أثر تشغيلي موثق</p>
-          <h2>الدقة تتحسن مع المراجعة</h2>
-          <p>وصلت دقة الرصد مبدئياً إلى 95%، ثم ارتفعت إلى 98% بعد معالجة البلاغات؛ لتصبح بيانات الحضور أساساً أوضح لتقارير الإنذارات والحرمان.</p>
-        </div>
-        <div class="print-outcome-stat">
-          <strong>96.7%</strong>
-          <span>توفير موثق في الوقت مقارنة بالإجراءات اليدوية</span>
-        </div>
-      </section>
-
-      <footer class="print-summary-footer">
-        <span>لترتيب عرض توضيحي يناسب هيكل كليتكم:</span>
-        <b dir="ltr">+20 106 209 1434</b>
-        <span>واتساب أو اتصال مباشر</span>
-      </footer>
-    </section>
-
     <!-- =====================================================================
          1. HERO SECTION
          ===================================================================== -->
@@ -561,7 +487,7 @@
             <h2>منظومة واحدة، <em>ودور واضح لكل طرف</em></h2>
           </div>
           <p>
-            لا يحتاج الطالب إلى أدوات المنسق، ولا يحتاج المحاضر إلى لوحة الإدارة. كل دور يبدأ من ما يحتاجه في يومه الدراسي، ثم تنتقل البيانات تلقائيًا إلى المرحلة التالية.
+            كل طرف يبدأ من واجهته اليومية: الطالب يتابع موقفه، والمحاضر يدير جلساته، والمنسق يراجع التشغيل. ثم تنتقل البيانات في سجل واحد واضح من الجلسة إلى القرار.
           </p>
         </div>
 
@@ -595,7 +521,7 @@
               <li>فحص بلاغات الطلاب المرتبطة بالجلسة وقبولها أو رفضها مع التوثيق</li>
             </ul>
             <div class="role-subpage-cta">
-              <a class="btn btn-outline-dark btn-sm" href="lecturer.html#methods">استكشف صفحة المحاضر بالتفصيل ←</a>
+              <a class="btn btn-outline-dark btn-sm" href="lecturer.html">استكشف صفحة المحاضر بالتفصيل ←</a>
             </div>
           </div>
 
@@ -620,7 +546,7 @@
               <li>تقديم بلاغ إلكتروني مرتبط بالجلسة ومتابعة حالته (قيد المراجعة / مقبول / مرفوض)</li>
             </ul>
             <div class="role-subpage-cta">
-              <a class="btn btn-outline-dark btn-sm" href="student.html#schedule">استكشف صفحة الطالب بالتفصيل ←</a>
+              <a class="btn btn-outline-dark btn-sm" href="student.html">استكشف صفحة الطالب بالتفصيل ←</a>
             </div>
           </div>
 
@@ -648,7 +574,7 @@
               <li>بوابة تحقق قبل استخراج قوائم الإنذارات والحرمان النهائية</li>
             </ul>
             <div class="role-subpage-cta">
-              <a class="btn btn-outline-dark btn-sm" href="coordinator.html#overview">استكشف صفحة المنسق بالتفصيل ←</a>
+              <a class="btn btn-outline-dark btn-sm" href="coordinator.html">استكشف صفحة المنسق بالتفصيل ←</a>
             </div>
           </div>
 
@@ -679,7 +605,7 @@
               <li>تقارير رسمية موثقة قابلة للطباعة والتصدير لمجالس الكليات والاعتماد</li>
             </ul>
             <div class="role-subpage-cta">
-              <a class="btn btn-outline-dark btn-sm" href="journey.html#governance">استكشف حوكمة القرار والتقارير ←</a>
+              <a class="btn btn-outline-dark btn-sm" href="journey.html">استكشف حوكمة القرار والتقارير ←</a>
             </div>
           </div>
 
@@ -763,10 +689,10 @@
         <div class="section-head">
           <div>
             <p class="eyebrow dark">لقطات من التشغيل الفعلي</p>
-            <h2>لوحات تعرض ما يحدث <em>في الموديولات والأقسام أولًا بأول</em></h2>
+            <h2>شاشات توثق الرحلة <em>من القاعة إلى القرار</em></h2>
           </div>
           <p>
-            واجهات فعلية مستخرجة من بيئة التشغيل، تمنح الإدارة والمنسقين قراءة بصرية فورية لاتجاهات الحضور والغياب عبر الأسابيع والأقسام.
+            لقطات فعلية من تطبيق الطالب والمحاضر ولوحة المنسق، إلى جانب لوحات المتابعة التي تمنح الإدارة قراءة سريعة للحضور والغياب والالتزام.
           </p>
         </div>
 
@@ -789,50 +715,41 @@
         </div>
 
         <div class="gallery-bar">
-          <strong>معرض شاشات النظام الفعلية (8 لوحات تحليلية)</strong>
-          <span>اضغط على أي لوحة للتكبير والتنقل</span>
+          <div>
+            <strong>معرض تشغيلي شامل للمنظومة</strong>
+            <span>لوحات المتابعة وواجهات الطالب والمحاضر والمنسق من بيئة التشغيل.</span>
+          </div>
+          <div class="gallery-controls" aria-label="التنقل بين لقطات المعرض">
+            <button class="gallery-scroll-control" type="button" data-gallery-scroll="previous" aria-label="عرض اللقطات السابقة">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button class="gallery-scroll-control" type="button" data-gallery-scroll="next" aria-label="عرض اللقطات التالية">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
         </div>
 
-        <div class="gallery-grid">
-          <button class="gallery-item featured" type="button" data-full="assets/insight-1.jpg" data-caption="التوزيع العام لنسب الحضور والغياب على مستوى الكلية">
-            <img src="assets/insight-1.jpg" alt="لوحة التوزيع العام لنسب الحضور والغياب" width="547" height="458" loading="lazy">
-            <span class="gallery-caption">التوزيع العام للحضور</span>
-          </button>
-
-          <button class="gallery-item featured" type="button" data-full="assets/insight-3.jpg" data-caption="تطور معدلات الحضور عبر أسابيع الفصل الدراسي">
-            <img src="assets/insight-3.jpg" alt="منحنى تطور معدلات الحضور عبر الأسابيع" width="540" height="459" loading="lazy">
-            <span class="gallery-caption">منحنى الانتظام الأسبوعي</span>
-          </button>
-
-          <button class="gallery-item" type="button" data-full="assets/insight-2.jpg" data-caption="مقارنة معدلات الحضور بين الفرق والمستويات الدراسية">
-            <img src="assets/insight-2.jpg" alt="مقارنة معدلات الحضور بين الفرق الدراسية" width="539" height="460" loading="lazy">
-            <span class="gallery-caption">مقارنة الفرق الدراسية</span>
-          </button>
-
-          <button class="gallery-item" type="button" data-full="assets/insight-4.jpg" data-caption="تحليل قنوات التحضير المستخدمة وكثافة التفاعل">
-            <img src="assets/insight-4.jpg" alt="تحليل قنوات التحضير المستخدمة" width="540" height="459" loading="lazy">
-            <span class="gallery-caption">توزيع قنوات الرصد</span>
-          </button>
-
-          <button class="gallery-item wide-table" type="button" data-full="assets/insight-5.jpg" data-caption="سجل متابعة التزام الأقسام والمقررات بجلسات الجدول">
-            <img src="assets/insight-5.jpg" alt="جدول متابعة التزام الأقسام والمقررات" width="1072" height="457" loading="lazy">
-            <span class="gallery-caption">متابعة التزام الأقسام والمقررات</span>
-          </button>
-
-          <button class="gallery-item wide-table" type="button" data-full="assets/insight-6.jpg" data-caption="تفصيل الجلسات المسجلة وأعداد الحضور لكل محاضرة">
-            <img src="assets/insight-6.jpg" alt="تفصيل الجلسات المسجلة وأعداد الحضور" width="1074" height="458" loading="lazy">
-            <span class="gallery-caption">سجل الجلسات التفصيلي</span>
-          </button>
-
-          <button class="gallery-item wide-table" type="button" data-full="assets/insight-7.jpg" data-caption="مؤشرات الإنذار الأكاديمي وحصر تجاوز نسب الغياب">
-            <img src="assets/insight-7.jpg" alt="مؤشرات الإنذار الأكاديمي وحصر الغياب" width="1037" height="464" loading="lazy">
-            <span class="gallery-caption">قوائم الإنذار المبكر</span>
-          </button>
-
-          <button class="gallery-item wide-table" type="button" data-full="assets/insight-8.jpg" data-caption="ملخص الأداء التنفيذي الشامل وحوكمة البيانات">
-            <img src="assets/insight-8.jpg" alt="ملخص الأداء التنفيذي الشامل" width="1040" height="458" loading="lazy">
-            <span class="gallery-caption">ملخص الحوكمة التنفيذي</span>
-          </button>
+        <div class="gallery-grid operations-gallery" id="operations-gallery" tabindex="0" aria-label="معرض لقطات التشغيل؛ مرر أفقياً أو استخدم أزرار التنقل">
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/insight-1.jpg" data-caption="التوزيع العام لنسب الحضور والغياب على مستوى الكلية"><img src="assets/insight-1.jpg" alt="لوحة التوزيع العام لنسب الحضور والغياب" width="547" height="458" loading="lazy"><span class="gallery-caption">التوزيع العام للحضور</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/insight-2.jpg" data-caption="اتجاه تسجيل الحضور بحسب وسيلة الرصد"><img src="assets/insight-2.jpg" alt="لوحة اتجاه الحضور بحسب وسيلة الرصد" width="539" height="460" loading="lazy"><span class="gallery-caption">قنوات الرصد المستخدمة</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/insight-3.jpg" data-caption="إجمالي الحضور موزعاً على الموديولات"><img src="assets/insight-3.jpg" alt="لوحة الحضور بحسب الموديول" width="540" height="459" loading="lazy"><span class="gallery-caption">متابعة الموديولات</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/insight-4.jpg" data-caption="توزيع سجلات الحضور بين الأقسام"><img src="assets/insight-4.jpg" alt="لوحة الحضور بحسب القسم" width="540" height="459" loading="lazy"><span class="gallery-caption">مقارنة الأقسام</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/insight-5.jpg" data-caption="ملخص نشاط الأقسام وعدد الطلاب والجلسات"><img src="assets/insight-5.jpg" alt="جدول نشاط الأقسام" width="1072" height="457" loading="lazy"><span class="gallery-caption">ملخص نشاط الأقسام</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/insight-6.jpg" data-caption="ملخص نشاط الموديولات والجلسات"><img src="assets/insight-6.jpg" alt="جدول نشاط الموديولات" width="1074" height="458" loading="lazy"><span class="gallery-caption">ملخص نشاط الموديولات</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/insight-7.jpg" data-caption="متابعة التزام تسجيل الحضور حسب الموديول"><img src="assets/insight-7.jpg" alt="جدول التزام الحضور حسب الموديول" width="1037" height="464" loading="lazy"><span class="gallery-caption">التزام تسجيل الحضور</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/insight-8.jpg" data-caption="متابعة التزام تسجيل الحضور حسب القسم"><img src="assets/insight-8.jpg" alt="جدول التزام الحضور حسب القسم" width="1040" height="458" loading="lazy"><span class="gallery-caption">التزام الأقسام</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/app-student-paths.png" data-caption="المقررات والموديولات التي تظهر للطالب"><img src="assets/app-student-paths.png" alt="تطبيق الطالب يعرض المقررات والموديولات" width="591" height="1280" loading="lazy"><span class="gallery-caption">تطبيق الطالب: المقررات</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/app-student-checkin-method.png" data-caption="اختيار وسيلة تسجيل الحضور للطالب"><img src="assets/app-student-checkin-method.png" alt="تطبيق الطالب لاختيار وسيلة تسجيل الحضور" width="591" height="1280" loading="lazy"><span class="gallery-caption">تطبيق الطالب: تسجيل الحضور</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/app-student-absence-details.png" data-caption="متابعة تفاصيل الغياب والإنذارات من التطبيق"><img src="assets/app-student-absence-details.png" alt="تطبيق الطالب يعرض تفاصيل الغياب" width="590" height="1280" loading="lazy"><span class="gallery-caption">تطبيق الطالب: متابعة الغياب</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/app-student-absent-sessions.png" data-caption="قائمة الجلسات وحالة الحضور والغياب"><img src="assets/app-student-absent-sessions.png" alt="تطبيق الطالب يعرض الجلسات وحالة الحضور" width="591" height="1280" loading="lazy"><span class="gallery-caption">تطبيق الطالب: سجل الجلسات</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/app-student-complaint-ar.png" data-caption="بلاغ حضور إلكتروني مرتبط بالجلسة"><img src="assets/app-student-complaint-ar.png" alt="تطبيق الطالب لتقديم بلاغ حضور" width="590" height="1280" loading="lazy"><span class="gallery-caption">تطبيق الطالب: البلاغ الإلكتروني</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/app-student-complaint-form.png" data-caption="نموذج إدخال تفاصيل البلاغ"><img src="assets/app-student-complaint-form.png" alt="نموذج بلاغ الحضور في تطبيق الطالب" width="402" height="1280" loading="lazy"><span class="gallery-caption">تطبيق الطالب: تفاصيل البلاغ</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/app-lecturer-sessions.png" data-caption="جلسات اليوم في تطبيق عضو هيئة التدريس"><img src="assets/app-lecturer-sessions.png" alt="تطبيق عضو هيئة التدريس يعرض جلسات اليوم" width="591" height="1280" loading="lazy"><span class="gallery-caption">تطبيق المحاضر: جلسات اليوم</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/app-lecturer-scanning.png" data-caption="رصد الحضور من تطبيق عضو هيئة التدريس"><img src="assets/app-lecturer-scanning.png" alt="تطبيق عضو هيئة التدريس لرصد الحضور" width="576" height="1280" loading="lazy"><span class="gallery-caption">تطبيق المحاضر: الرصد</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/app-complaint-decision.png" data-caption="مراجعة قرار البلاغ من تطبيق عضو هيئة التدريس"><img src="assets/app-complaint-decision.png" alt="تطبيق عضو هيئة التدريس لمراجعة البلاغات" width="591" height="1280" loading="lazy"><span class="gallery-caption">تطبيق المحاضر: قرار البلاغ</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/app-session-type.png" data-caption="تحديد نوع الجلسة الحضورية أو الإلكترونية"><img src="assets/app-session-type.png" alt="واجهة تحديد نوع الجلسة" width="591" height="1280" loading="lazy"><span class="gallery-caption">إعداد الجلسة</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/web-coordinator-modules.png" data-caption="متابعة الموديولات من لوحة المنسق"><img src="assets/web-coordinator-modules.png" alt="لوحة المنسق لمتابعة الموديولات" width="777" height="718" loading="lazy"><span class="gallery-caption">لوحة المنسق: الموديولات</span></button>
+          <button class="gallery-item" type="button" data-gallery-group="operations" data-full="assets/web-coordinator-review.png" data-caption="مراجعة السجلات والبلاغات قبل التقارير"><img src="assets/web-coordinator-review.png" alt="لوحة المنسق لمراجعة السجلات" width="1096" height="722" loading="lazy"><span class="gallery-caption">لوحة المنسق: المراجعة</span></button>
         </div>
       </div>
     </section>
@@ -959,152 +876,6 @@
     </section>
 
     <!-- =====================================================================
-         8. MERGED ADMINISTRATIVE & FINANCIAL IMPACT
-         ===================================================================== -->
-    <section class="section surface-paper" id="roi">
-      <div class="section-inner reveal">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow dark">أثر واضح على التشغيل اليومي</p>
-            <h2>وقت أقل في المتابعة، <em>وسجل أوضح للقرار</em></h2>
-          </div>
-          <p>
-            تقلل المنظومة الوقت الذي يضيع في النداء والتفريغ ومراجعة الكشوف، وتمنح الكلية مرجعًا واحدًا قبل أي قرار أكاديمي.
-          </p>
-        </div>
-
-        <div class="impact-dual-grid">
-          <!-- Column 1: Administrative Governance Impact -->
-          <div class="impact-column">
-            <div class="impact-col-head">
-              <div class="icon-box" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 20V10M18 20V4M6 20v-4"/>
-                </svg>
-              </div>
-              <h3>الأثر الإداري والأكاديمي</h3>
-            </div>
-
-            <ul class="impact-list">
-              <li>
-                <span class="impact-num">01</span>
-                <div>
-                  <b>وقت أكبر للشرح</b>
-                  <p>في سيناريو السكشن من 60 طالبًا، ينتقل تسجيل الحضور عبر Bluetooth إلى أقل من دقيقة بدل دورة ورقية أطول.</p>
-                </div>
-              </li>
-              <li>
-                <span class="impact-num">02</span>
-                <div>
-                  <b>موقف واضح قبل الإنذار</b>
-                  <p>يرى الطالب نسبة غيابه وموقفه، وتراجع الكلية البيانات قبل استخراج الإنذارات والحرمان.</p>
-                </div>
-              </li>
-              <li>
-                <span class="impact-num">03</span>
-                <div>
-                  <b>مراجعة أسهل للبلاغات</b>
-                  <p>البلاغ مرتبط بالجلسة نفسها ويصل إلى المحاضر ثم يظهر قرار القبول أو الرفض للطالب.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Column 2: Financial & Resource Efficiency -->
-          <div class="impact-column impact-column-alt">
-            <div class="impact-col-head">
-              <div class="icon-box" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8M12 18V6"/>
-                </svg>
-              </div>
-              <h3>استخدام أفضل للموارد</h3>
-            </div>
-
-            <ul class="impact-list">
-              <li>
-                <span class="impact-num">01</span>
-                <div>
-                  <b>ورق أقل وأرشفة أبسط</b>
-                  <p>تقل الحاجة إلى طباعة الكشوف ونقلها وحفظها بين الأقسام والمكاتب.</p>
-                </div>
-              </li>
-              <li>
-                <span class="impact-num">02</span>
-                <div>
-                  <b>خيارات تشغيل تناسب البيئة</b>
-                  <p>تعمل المنظومة عبر Bluetooth أو NFC أو القائمة الإلكترونية أو استيراد Teams، بحسب تجهيزات الكلية.</p>
-                </div>
-              </li>
-              <li>
-                <span class="impact-num">03</span>
-                <div>
-                  <b>تفرغ أكبر للمتابعة</b>
-                  <p>بدل جمع ملفات كثيرة ودمجها، يستطيع فريق التشغيل التركيز على الحالات التي تحتاج تدخلًا.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="roi-strip">
-          <div>
-            <strong>قيمة عملية تبدأ من أول دورة تشغيل</strong>
-            <span>وقت أقل في التفريغ، متابعة أوضح، وقرار أكاديمي يمكن الرجوع إلى بياناته.</span>
-          </div>
-          <div class="roi-equation" aria-label="ملخص المعادلة التشغيلية">
-            <em>طرق تشغيل متعددة</em>
-            <span>+</span>
-            <em>تفريغ يدوي أقل</em>
-            <span>=</span>
-            <b>متابعة أسهل وقرار أوضح</b>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================================================================
-         10. 4-STEP ONBOARDING ROADMAP
-         ===================================================================== -->
-    <section class="section surface-cream" id="onboarding">
-      <span id="partners" aria-hidden="true"></span>
-      <div class="section-inner reveal">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow dark">بداية عملية ومنظمة</p>
-            <h2>كيف تبدأ كليتك التشغيل <em>في 4 خطوات</em>؟</h2>
-          </div>
-          <p>
-            نبدأ تدريجيًا من بيانات الكلية إلى تشغيل تجريبي، ثم نوسع التطبيق وفق ما يناسب هيكلها الدراسي.
-          </p>
-        </div>
-
-        <ol class="onboarding-steps">
-          <li class="onboarding-step">
-            <span class="step-badge">الخطوة 01</span>
-            <h3>تهيئة الهيكل الأكاديمي</h3>
-            <p>تجهيز الأقسام والمقررات وقوائم الطلاب والجدول الدراسي بصيغة Excel.</p>
-          </li>
-          <li class="onboarding-step">
-            <span class="step-badge">الخطوة 02</span>
-            <h3>تعريف وتدريب سريع</h3>
-            <p>إرشاد عملي للمنسقين وأعضاء هيئة التدريس، مع شرح مبسط للطلاب.</p>
-          </li>
-          <li class="onboarding-step">
-            <span class="step-badge">الخطوة 03</span>
-            <h3>إطلاق تجريبي مرحلي</h3>
-            <p>بدء التشغيل على فرقة دراسية أو قسم محدد للتحقق من انسيابية القاعات وضبط الإعدادات.</p>
-          </li>
-          <li class="onboarding-step">
-            <span class="step-badge">الخطوة 04</span>
-            <h3>التعميم وتفعيل لوحات القرار</h3>
-            <p>توسيع النطاق لكامل الكلية وتفعيل تقارير الالتزام والإنذار الأكاديمي المبكر للإدارة.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- =====================================================================
          11. FREQUENTLY ASKED QUESTIONS (ACCORDION)
          ===================================================================== -->
     <section class="section surface-paper" id="faq">
@@ -1193,7 +964,7 @@
             <p class="eyebrow dark">الخطوة التالية</p>
             <h2>اطلب عرضًا مناسبًا <em>لهيكل كليتك</em></h2>
             <p>
-              نعرض معكم دورة العمل على هيكل مقرراتكم، ونناقش نقطة البداية المناسبة وعدد الطلاب وطبيعة القاعات.
+              نعرض معكم دورة العمل على هيكل مقرراتكم، ونناقش نقطة البداية المناسبة وطبيعة القاعات وتجهيزاتها.
             </p>
 
             <div class="contact-channels">
@@ -1215,15 +986,6 @@
                 <a class="btn btn-outline-dark btn-sm" href="tel:+201062091434">اتصال هاتفي</a>
               </div>
 
-              <div class="channel-card">
-                <div>
-                  <strong>نسخة تنفيذية للعرض على مجلس الكلية</strong>
-                  <span>طباعة أو حفظ ملخص الصفحة كملف PDF منسق</span>
-                </div>
-                <button class="btn btn-outline-dark btn-sm" type="button" data-print-summary>
-                  طباعة الملخص التنفيذي
-                </button>
-              </div>
             </div>
           </div>
 
@@ -1237,6 +999,11 @@
                 <div class="form-field">
                   <label for="req-name">الاسم الكامل *</label>
                   <input id="req-name" name="name" type="text" required placeholder="أ.د / د. الاسم الكامل">
+                </div>
+
+                <div class="form-field">
+                  <label for="req-contact">رقم الهاتف أو البريد الرسمي *</label>
+                  <input id="req-contact" name="contact" type="text" required placeholder="01xxxxxxxxx أو name@univ.edu.eg">
                 </div>
 
                 <div class="form-field">
@@ -1255,31 +1022,6 @@
                 <div class="form-field">
                   <label for="req-inst">الجامعة / الكلية / المعهد *</label>
                   <input id="req-inst" name="institution" type="text" required placeholder="مثال: كلية الهندسة — جامعة ...">
-                </div>
-
-                <div class="form-field">
-                  <label for="req-students">العدد التقريبي للطلاب *</label>
-                  <select id="req-students" name="students" required>
-                    <option value="">اختر النطاق العددي</option>
-                    <option value="أقل من 1,500 طالب">أقل من 1,500 طالب</option>
-                    <option value="من 1,500 إلى 5,000 طالب">من 1,500 إلى 5,000 طالب</option>
-                    <option value="من 5,000 إلى 10,000 طالب">من 5,000 إلى 10,000 طالب</option>
-                    <option value="أكثر من 10,000 طالب">أكثر من 10,000 طالب</option>
-                  </select>
-                </div>
-
-                <div class="form-field">
-                  <label for="req-contact">رقم الهاتف أو البريد الرسمي *</label>
-                  <input id="req-contact" name="contact" type="text" required placeholder="01xxxxxxxxx أو name@univ.edu.eg">
-                </div>
-
-                <div class="form-field">
-                  <label for="req-scope">نطاق الاهتمام المبدئي</label>
-                  <select id="req-scope" name="scope">
-                    <option value="تطبيق تجريبي لقسم أو فرقة دراسية">تطبيق تجريبي لقسم أو فرقة دراسية</option>
-                    <option value="تشغيل كامل على مستوى الكلية">تشغيل كامل على مستوى الكلية</option>
-                    <option value="تعميم على عدة كليات بالجامعة">تعميم على عدة كليات بالجامعة</option>
-                  </select>
                 </div>
 
                 <div class="form-field full-span">

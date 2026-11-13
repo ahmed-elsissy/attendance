@@ -224,6 +224,16 @@
     });
   });
 
+  const operationsGallery = document.getElementById('operations-gallery');
+  document.querySelectorAll('[data-gallery-scroll]').forEach((button) => {
+    button.addEventListener('click', () => {
+      if (!operationsGallery) return;
+      const distance = Math.max(260, Math.round(operationsGallery.clientWidth * 0.78));
+      const direction = button.dataset.galleryScroll === 'next' ? -1 : 1;
+      operationsGallery.scrollBy({ left: direction * distance, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+    });
+  });
+
   galleryModal?.querySelector('.gallery-close')?.addEventListener('click', () => galleryModal.close());
   galleryModal?.querySelector('.gallery-prev')?.addEventListener('click', () => showGallerySlide(activeGalleryIndex - 1));
   galleryModal?.querySelector('.gallery-next')?.addEventListener('click', () => showGallerySlide(activeGalleryIndex + 1));
@@ -323,14 +333,8 @@
   }
 
   /* ------------------------------------------------------------------------
-     8. Print Executive Summary & Analytics Listeners
+     8. Analytics listeners
      ------------------------------------------------------------------------ */
-  document.querySelectorAll('[data-print-summary]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      trackEvent('print_executive_summary');
-      window.print();
-    });
-  });
 
   document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
     link.addEventListener('click', () => {
@@ -376,11 +380,9 @@
     const lines = [
       'مرحباً، أرغب في طلب عرض توضيحي لمنظومة الحوكمة الرقمية للحضور الأكاديمي:',
       `• الاسم: ${formData.get('name') || '—'}`,
-      `• المسمى الوظيفي: ${formData.get('role') || '—'}`,
-      `• الجامعة / الكلية: ${formData.get('institution') || '—'}`,
-      `• عدد الطلاب التقريبي: ${formData.get('students') || '—'}`,
       `• وسيلة التواصل: ${formData.get('contact') || '—'}`,
-      `• نطاق الاهتمام: ${formData.get('scope') || '—'}`
+      `• المسمى الوظيفي: ${formData.get('role') || '—'}`,
+      `• الجامعة / الكلية: ${formData.get('institution') || '—'}`
     ];
     const notes = (formData.get('notes') || '').toString().trim();
     if (notes) lines.push(`• ملاحظات إضافية: ${notes}`);
@@ -403,8 +405,7 @@
       const endpoint = (demoForm.dataset.endpoint || '').trim();
 
       trackEvent('demo_form_submit', {
-        scope: formData.get('scope'),
-        students: formData.get('students')
+        role: formData.get('role')
       });
 
       // If a Formspree / Google Apps Script webhook URL is configured, send JSON first
