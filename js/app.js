@@ -444,4 +444,110 @@
       }
     });
   }
+  /* ------------------------------------------------------------------------
+     10. Shared evidence section and concise cross-page routes
+     ------------------------------------------------------------------------ */
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  const pageRoutes = {
+    'journey.html': [
+      ['student.html#schedule', 'تجربة الطالب'],
+      ['lecturer.html#methods', 'تجربة المحاضر'],
+      ['coordinator.html#overview', 'تجربة المنسق']
+    ],
+    'student.html': [
+      ['lecturer.html#reports', 'دورة البلاغات للمحاضر'],
+      ['coordinator.html#records', 'مراجعة السجلات للمنسق'],
+      ['journey.html#followup', 'الرحلة التعليمية الكاملة']
+    ],
+    'lecturer.html': [
+      ['student.html#checkin', 'تسجيل الطالب للحضور'],
+      ['coordinator.html#overview', 'متابعة المنسق للتشغيل'],
+      ['journey.html#lecture', 'الرحلة التعليمية الكاملة']
+    ],
+    'coordinator.html': [
+      ['student.html#tracking', 'متابعة الطالب لموقفه'],
+      ['lecturer.html#reports', 'دورة البلاغات للمحاضر'],
+      ['journey.html#governance', 'مسار الحوكمة والقرار']
+    ]
+  };
+
+  function addNumbersSection() {
+    if (!pageRoutes[currentPage] || document.getElementById('numbers')) return;
+
+    const faq = document.getElementById('faq');
+    if (!faq) return;
+
+    const numbers = document.createElement('section');
+    numbers.className = 'section surface-paper numbers-section';
+    numbers.id = 'numbers';
+    numbers.innerHTML = `
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow dark">تجربة تشغيل موثقة</p>
+            <h2>أرقامنا في <em>كلية الطب البشري — جامعة الزقازيق</em></h2>
+          </div>
+          <p>مؤشرات فعلية للتشغيل؛ تعكس نطاق التجربة وجودة متابعتها، وليست وعوداً أو تقديرات تسويقية.</p>
+        </div>
+        <div class="numbers-group" aria-label="نطاق التشغيل">
+          <h3>نطاق التشغيل</h3>
+          <div class="numbers-grid">
+            <article><strong>572,243</strong><span>عملية حضور موثقة</span></article>
+            <article><strong>8,242</strong><span>طالباً ضمن التجربة</span></article>
+            <article><strong>700</strong><span>عضو هيئة تدريس</span></article>
+            <article><strong>1,069</strong><span>محاضرة وسكشن</span></article>
+            <article><strong>103</strong><span>مساراً تعليمياً</span></article>
+            <article><strong>16</strong><span>قسماً أكاديمياً</span></article>
+            <article><strong>5</strong><span>فرق دراسية</span></article>
+            <article><strong>2</strong><span>فصلين دراسيين</span></article>
+          </div>
+        </div>
+        <div class="numbers-group numbers-group-emphasis" aria-label="جودة المتابعة والأثر التشغيلي">
+          <h3>جودة المتابعة والأثر التشغيلي</h3>
+          <div class="numbers-grid">
+            <article><strong>95%</strong><span>التزام مبدئي للمحاضرين</span></article>
+            <article><strong>98%</strong><span>دقة نهائية بعد مراجعة البلاغات</span></article>
+            <article><strong>19,000</strong><span>بلاغ من أصل 370 ألف عملية في الفصل السابق</span></article>
+            <article><strong>96.7%</strong><span>توفير في وقت إجراءات الحضور والغياب</span></article>
+          </div>
+        </div>
+        <p class="numbers-note">ملاحظة تفسيرية: البلاغات ترتبط أساساً باكتمال تسجيل المحاضرين للجلسات، ويُستكمل ما يتعذر حسمه إلكترونياً وفق إجراءات الكلية.</p>
+      </div>`;
+    faq.parentNode.insertBefore(numbers, faq);
+  }
+
+  function simplifyCrossPageDirectory() {
+    const routes = pageRoutes[currentPage];
+    const cta = document.getElementById('cta');
+    if (!routes || !cta) return;
+
+    const sectionHead = cta.querySelector('.section-head');
+    const directory = cta.querySelector('.ecosystem-grid');
+    if (!sectionHead || !directory) return;
+
+    directory.hidden = true;
+    sectionHead.innerHTML = `
+      <div>
+        <p class="eyebrow dark">تفاصيل مترابطة بلا تكرار</p>
+        <h2>تابع المنظومة <em>من الدور الذي يهمك</em></h2>
+      </div>
+      <p>كل صفحة تتناول دورها فقط. انتقل مباشرة إلى الخطوة أو الطرف المرتبط بما تقرأه الآن.</p>`;
+
+    const routesStrip = document.createElement('nav');
+    routesStrip.className = 'journey-links-strip';
+    routesStrip.setAttribute('aria-label', 'روابط الأدوار المرتبطة');
+    routesStrip.innerHTML = routes
+      .map(([href, label]) => `<a href="${href}">${label}</a>`)
+      .join('');
+    directory.parentNode.insertBefore(routesStrip, directory);
+  }
+
+  function simplifyStickyCtas() {
+    document.querySelectorAll('.mobile-sticky-cta .btn-primary').forEach((button) => button.remove());
+  }
+
+  addNumbersSection();
+  simplifyCrossPageDirectory();
+  simplifyStickyCtas();
 })();
