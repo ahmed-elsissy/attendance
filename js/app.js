@@ -378,7 +378,7 @@
 
   function buildBriefText(formData) {
     const lines = [
-      'مرحباً، أرغب في طلب عرض توضيحي لمنظومة الحوكمة الرقمية للحضور الأكاديمي:',
+      'مرحباً، أرغب في طلب عرض توضيحي لمنظومة حوكمة التعليم الرقمية:',
       `• الاسم: ${formData.get('name') || '—'}`,
       `• وسيلة التواصل: ${formData.get('contact') || '—'}`,
       `• المسمى الوظيفي: ${formData.get('role') || '—'}`,
@@ -452,29 +452,29 @@
 
   const pageRoutes = {
     'journey.html': [
-      ['student.html#schedule', 'تجربة الطالب'],
-      ['lecturer.html#methods', 'تجربة المحاضر'],
-      ['coordinator.html#overview', 'تجربة المنسق']
+      ['student.html', 'واجهة الطالب'],
+      ['lecturer.html', 'واجهة عضو هيئة التدريس'],
+      ['coordinator.html', 'لوحة المنسق الأكاديمي']
     ],
     'student.html': [
-      ['lecturer.html#reports', 'دورة البلاغات للمحاضر'],
-      ['coordinator.html#records', 'مراجعة السجلات للمنسق'],
-      ['journey.html#followup', 'الرحلة التعليمية الكاملة']
+      ['lecturer.html', 'واجهة عضو هيئة التدريس'],
+      ['coordinator.html', 'لوحة المنسق الأكاديمي'],
+      ['journey.html#details', 'متابعة إدارة الكلية']
     ],
     'lecturer.html': [
-      ['student.html#checkin', 'تسجيل الطالب للحضور'],
-      ['coordinator.html#overview', 'متابعة المنسق للتشغيل'],
-      ['journey.html#lecture', 'الرحلة التعليمية الكاملة']
+      ['student.html', 'واجهة الطالب'],
+      ['coordinator.html', 'لوحة المنسق الأكاديمي'],
+      ['journey.html#details', 'متابعة إدارة الكلية']
     ],
     'coordinator.html': [
-      ['student.html#tracking', 'متابعة الطالب لموقفه'],
-      ['lecturer.html#reports', 'دورة البلاغات للمحاضر'],
-      ['journey.html#governance', 'مسار الحوكمة والقرار']
+      ['student.html', 'واجهة الطالب'],
+      ['lecturer.html', 'واجهة عضو هيئة التدريس'],
+      ['journey.html#details', 'متابعة إدارة الكلية']
     ]
   };
 
   function addNumbersSection() {
-    if (!pageRoutes[currentPage] || document.getElementById('numbers')) return;
+    if (!pageRoutes[currentPage] || currentPage === 'student.html' || document.getElementById('numbers')) return;
 
     const faq = document.getElementById('faq');
     if (!faq) return;
@@ -489,7 +489,6 @@
             <p class="eyebrow dark">تجربة تشغيل موثقة</p>
             <h2>أرقامنا في <em>كلية الطب البشري — جامعة الزقازيق</em></h2>
           </div>
-          <p>مؤشرات فعلية للتشغيل؛ تعكس نطاق التجربة وجودة متابعتها، وليست وعوداً أو تقديرات تسويقية.</p>
         </div>
         <div class="numbers-group" aria-label="نطاق التشغيل">
           <h3>نطاق التشغيل</h3>
@@ -530,10 +529,10 @@
     directory.hidden = true;
     sectionHead.innerHTML = `
       <div>
-        <p class="eyebrow dark">تفاصيل مترابطة بلا تكرار</p>
-        <h2>تابع المنظومة <em>من الدور الذي يهمك</em></h2>
+        <p class="eyebrow dark">واجهات المنظومة</p>
+        <h2>استعرض <em>واجهات المنظومة</em></h2>
       </div>
-      <p>كل صفحة تتناول دورها فقط. انتقل مباشرة إلى الخطوة أو الطرف المرتبط بما تقرأه الآن.</p>`;
+      <p>اختر الواجهة التي تريد استعراضها، وانتقل مباشرة إلى تجربة الطرف المرتبط بهذه المرحلة.</p>`;
 
     const routesStrip = document.createElement('nav');
     routesStrip.className = 'journey-links-strip';
